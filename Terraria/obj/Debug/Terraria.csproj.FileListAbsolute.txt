@@ -1,0 +1,17 @@
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\Terraria.exe.config
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\Terraria.exe
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\Terraria.pdb
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Audio.dll
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Graphics.dll
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.System.dll
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Window.dll
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Audio.xml
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Graphics.xml
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.System.xml
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\bin\Debug\SFML.Window.xml
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.csproj.SuggestedBindingRedirects.cache
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.csproj.CopyComplete
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.exe
+C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\obj\Debug\Terraria.pdb
