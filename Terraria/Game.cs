@@ -1,6 +1,10 @@
 using System;
+using System.Collections.Generic;
 using SFML.Graphics;
 using SFML.Window;
+using System.Drawing;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Arkanoid
 {
@@ -17,6 +21,7 @@ namespace Arkanoid
 
         public void Start()
         {
+            //Serialize(gameField.allObjects.displayObjects);
             Window = new RenderWindow(new VideoMode(800, 600), "Arkanoid");
             Window.SetFramerateLimit(60);
             Window.Clear(Color.White);
@@ -56,5 +61,15 @@ namespace Arkanoid
         {
             
         }
+        
+        /*public void Serialize(List<GameEntity> displayObjects)
+        {
+            System.Type[] typeArr = new[] { typeof(Ball), typeof(Platform), typeof(Brick) };
+            XmlSerializer xs = new XmlSerializer(typeArr);
+            using (FileStream fs = new FileStream("serialize.xml", FileMode.Open))
+            {
+                xs.Serialize(fs, displayObjects);
+            }
+        }*/
     }
 }

@@ -80,6 +80,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="serialize.xml" />
+    <Content Include="serialize\balls.xml" />
+    <Content Include="serialize\bricks.xml" />
+    <Content Include="serialize\platform.xml" />
     <Content Include="Terraria.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

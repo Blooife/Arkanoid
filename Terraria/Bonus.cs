@@ -15,15 +15,6 @@ namespace Arkanoid
         {
             throw new System.NotImplementedException();
         }
-
-        public override bool CheckCollisions(GameEntity obj)
-        {
-            return false;
-        }
-        public override void decreaseStrength()
-        {
-            
-        }
     }
 
     public class Bonuses

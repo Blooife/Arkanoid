@@ -10,13 +10,6 @@ namespace Arkanoid
         public GameField()
         {
             allObjects = new DisplayObjects();
-            
-            
-        }
-
-        public void CheckGameState()
-        {
-            
         }
     }
 }

@@ -1,4 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 using SFML.Graphics;
 
 namespace Arkanoid
@@ -6,7 +9,7 @@ namespace Arkanoid
     public class DisplayObjects
     {
        // private GameEntity[] displayContent;
-        private List<GameEntity> displayObjects = new List<GameEntity>();
+        public List<GameEntity> displayObjects = new List<GameEntity>();
 
         public DisplayObjects()
         {
@@ -34,8 +37,10 @@ namespace Arkanoid
                     foreach (var obj2 in displayObjects)
                     {
                         if(obj.Equals(obj2) || !obj2.visible) continue;
+                        
                         if (obj.CheckCollisions(obj2))
                         {
+                            obj.ChangeDirection(obj2);
                             break;
                         }
                     }
@@ -50,7 +55,7 @@ namespace Arkanoid
                     obj.Move();
             }
         }
-
+        
         public void drawObjects(RenderWindow window)
         {
             foreach (var obj in displayObjects)

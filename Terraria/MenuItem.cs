@@ -15,15 +15,6 @@ namespace Arkanoid
         {
             
         }
-
-        public override bool CheckCollisions(GameEntity obj)
-        {
-            return false;
-        }
-        public override void decreaseStrength()
-        {
-            
-        }
         
     }
 
