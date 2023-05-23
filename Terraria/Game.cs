@@ -4,6 +4,8 @@ using SFML.Graphics;
 using SFML.Window;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Security.AccessControl;
 using System.Threading;
 using System.Xml.Serialization;
 using GameEngine;
@@ -32,6 +34,7 @@ namespace Arkanoid
         public void Start()
         {
             Window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
+            Window.Position = new Vector2i(0, 0);
             Window.SetFramerateLimit(60);
             Window.SetKeyRepeatEnabled(false);
             Window.Clear(Color.White);
@@ -127,6 +130,13 @@ namespace Arkanoid
             );
             pause = false;
             Window.Position = new Vector2i(px,py);
+            float scaleX =(float) Window.Size.X / 800;
+            float scaleY = (float)Window.Size.Y / 600;
+            float scale = Math.Min(scaleX, scaleY);
+            foreach (var o in gameField.displayObjects)
+            {
+                o.UpdateSize();
+            }
         }
 
         public static void Exit()

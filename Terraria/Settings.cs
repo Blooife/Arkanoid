@@ -32,7 +32,7 @@ namespace GameEngine
             listBtn.Add(new Button(260, 350, 280, 30, "Hard"));
             listBtn.Add(new Button(110, 260, 280, 30, "Difficulty"));
             listBtn.Add(new Button(410, 260, 280, 30, "Screen size"));
-            listBtn.Add(new Button(260, 230, 280, 30, "Size 600*600"));
+            listBtn.Add(new Button(260, 230, 280, 30, "Size 700*550"));
             listBtn.Add(new Button(260, 290, 280, 30, "Size 800*600"));
             listBtn.Add(new Button(260, 410, 280, 30, "Size 1024*600"));
             listBtn.Add(new Button(260, 350, 280, 30, "Size 1280*760"));
@@ -109,8 +109,8 @@ namespace GameEngine
         
         public void Size1OnClick(object sender, EventArgs ev)
         {
-            size = new Vector2i(500, 500);
-            Game.ChangeWindowSize(600, 600, 0,0);
+            size = new Vector2i(700, 550);
+            Game.ChangeWindowSize(700, 550, 0,0);
             ScreenSizeVisible(false);
         }
         public void Size5OnClick(object sender, EventArgs ev)

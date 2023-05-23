@@ -12,19 +12,21 @@ namespace Arkanoid
     public class Ball : GameEntity 
     {
         
-        [JsonProperty] public int radius;
+        [JsonProperty] public float radius;
         [JsonProperty] public int speed;
         [JsonProperty] public double direction;
 
-        public Ball(int x, int y, int rad, int sp, double dir, Color col)
+        public Ball(int x, int y, float rad, int sp, double dir, Color col)
         {
             type = "Ball";
             radius = rad;
-            x1 = (x-rad);
+            x1 = (x-(int)rad);
             x2 = (x+rad);
             y1 = (y-rad);
             y2 = (y+rad);
             shape = new CircleShape(rad);
+           // shape.Scale = new Vector2f(1, 1);
+           // shape.Origin = new Vector2f(x1 + rad, y1+rad);
             color = col;
             shape.FillColor = col;
             speed = sp;
@@ -33,8 +35,30 @@ namespace Arkanoid
             visible = true;
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
+            UpdateSize();
+        }
+
+        public override void UpdateSize()
+        {
+            if (Game.Window.Size.X >= 1000)
+            {
+                float scaleX =(float) Game.Window.Size.X / 800;
+                float scaleY = (float)Game.Window.Size.Y / 600;
+                float scale = Math.Min(scaleX, scaleY);
+                shape = new CircleShape(10);
+                shape.FillColor = color;
+                shape.Scale = new Vector2f(scaleY, scaleX); 
+            }
+            else
+            {
+                float scaleX =(float) Game.Window.Size.X / 800;
+                float scaleY = (float)Game.Window.Size.Y / 600;
+                float scale = Math.Min(scaleX, scaleY);
+                shape = new CircleShape(15);
+                shape.FillColor = color;
+                shape.Scale = new Vector2f(1, 1);
+            }
+            
         }
 
         public override void SerializeToText(string filename)
@@ -62,9 +86,8 @@ namespace Arkanoid
             visible = true;
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
             type = "Ball";
+            UpdateSize();
         }
 
         public void UpdateSpeed(int sp)
@@ -113,8 +136,6 @@ namespace Arkanoid
             x2 = (int)(x2 + dx);
             y1 = (int)(y1 + dy);
             y2 = (int)(y2 + dy);
-            x = x1 + width / 2;
-            y = y1 + height / 2;
             shape.Position = new Vector2f(x1, y1);
         }
 
@@ -154,6 +175,38 @@ namespace Arkanoid
                 Game.player.stat.score++;
                 brick.decreaseStrength();
             }
+            /*if (leftY >= obj.leftY && rightY <= obj.rightY )
+            {
+                if (leftX <= obj.leftX)
+                {
+                    rightX = obj.leftX;
+                    leftX = rightX - 2 * (int)radius;
+                    refX = rightX - (int)radius;
+                }
+                else
+                {
+                    leftX = obj.rightX;
+                    rightX = leftX + 2 * (int)radius;
+                    refX = rightX - (int)radius;
+                }
+                setDirection((float)(Math.PI) - getDirection());
+            }
+            else
+            {
+                if (leftY <= obj.leftY)
+                {
+                    rightY = obj.leftY;
+                    leftY = rightY - 2 * (int)radius;
+                    refY = leftY + (int)radius;
+                }
+                else
+                {
+                    leftY = obj.rightY;
+                    rightY = leftY + 2 * (int)radius;
+                    refY = leftY + (int)radius;
+                }
+                setDirection(2 * (float)Math.PI-getDirection());
+            }*/
         }
     }
 

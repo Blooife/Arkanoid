@@ -12,8 +12,8 @@ namespace Arkanoid
     public abstract class GameEntity : SFML.Graphics.Drawable
     {
         public Shape shape;
-        [JsonProperty] public int x1, y1, x2, y2;
-        public int width, height;
+        [JsonProperty] public float x1, y1, x2, y2;
+        public float width, height;
         public int x, y;
         [JsonProperty]public Color color;
         public int backgroundColor;
@@ -39,11 +39,16 @@ namespace Arkanoid
             float scaleX =(float) window.Size.X / 800;
             float scaleY = (float)window.Size.Y / 600;
             float scale = Math.Min(scaleX, scaleY);
-            //shape.Scale = new Vector2f(scale, scale);
+                
             Console.WriteLine($"{scale}  {scaleX}   {scaleY}");
             Console.WriteLine(scale.ToString());
             shape.Position = new Vector2f(x1, y1);
             window.Draw(shape);
+        }
+
+        public virtual void UpdateSize()
+        {
+            
         }
 
         public bool CheckCollisions(GameEntity obj)

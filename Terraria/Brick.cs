@@ -21,8 +21,6 @@ namespace Arkanoid
             type = "Brick";
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
             this.x1 = x1;
             this.x2 = x2;
             this.y1 = y1;
@@ -64,8 +62,6 @@ namespace Arkanoid
             type = "Brick";
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
         }
         public override void Move()
         {
@@ -99,10 +95,10 @@ namespace Arkanoid
           //  bricks.Add(new Brick(50,100,100,120,1,Color.Blue,false));
             for (int i = 1; i < 10; i++)
             {
-                bricks.Add(new Brick(i*70, 100,i*70+70, 120, 1, Color.Blue));
-                bricks.Add(new Brick(i*70, 120,i*70+70, 140, 2, Color.Red));
-                bricks.Add(new Brick(i*70, 140,i*70+70, 160, 1, Color.Blue));
-                bricks.Add(new Brick(i*70, 160,i*70+70, 180, 2, Color.Red));
+                bricks.Add(new Brick(i*70+5, 100,i*70+70, 120, 1, Color.Blue));
+                bricks.Add(new Brick(i*70+5, 120,i*70+70, 140, 2, Color.Red));
+                bricks.Add(new Brick(i*70+5, 140,i*70+70, 160, 1, Color.Blue));
+                bricks.Add(new Brick(i*70+5, 160,i*70+70, 180, 2, Color.Red));
             }
                
         }

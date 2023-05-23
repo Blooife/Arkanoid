@@ -33,8 +33,6 @@ namespace Arkanoid
             visible = true;
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
         }
 
         public void UpdateSpeed(int sp)
@@ -69,8 +67,6 @@ namespace Arkanoid
             type = "Platform";
             width = x2 - x1;
             height = y2 - y1;
-            x = x1 + width / 2;
-            y = y1 + height / 2;
         }
 
         public override void Move()
@@ -101,8 +97,6 @@ namespace Arkanoid
                     x1 = 800 - (x2 - x1);
                     x2 = 800;
                 }
-                x = x1 + width / 2;
-                y = y1 + height / 2;
             }
         }
     }

@@ -1,7 +1,7 @@
 {
   "stat": {
     "name": "Player1",
-    "score": 2,
+    "score": 5,
     "lives": 3
   },
   "type": "Player"
