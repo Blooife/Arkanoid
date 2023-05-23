@@ -1,0 +1,8 @@
+{
+  "stat": {
+    "name": "Player1",
+    "score": 2,
+    "lives": 3
+  },
+  "type": "Player"
+}
