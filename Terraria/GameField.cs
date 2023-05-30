@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using SFML.Graphics;
 
@@ -9,10 +10,15 @@ namespace GameEngine
         Balls balls;
         Bricks bricks;
         Platforms platforms;
-        public Bonuses bonuses;
+        public  static Bonuses bonuses;
         readonly StatusBar statusBar = new StatusBar(); 
         public static readonly Messages Messages = new Messages();
+        public static event EventHandler<CollisionEventArgs> OnCollision ;
 
+        public GameField()
+        {
+            OnCollision += CollisionEvent;
+        }
         public void NewGame()
         {
             balls = new Balls();
@@ -43,6 +49,27 @@ namespace GameEngine
 
         public void Update()
         {
+            balls = new Balls(1);
+            bricks = new Bricks(1);
+            platforms = new Platforms(1);
+            bonuses = new Bonuses(1);
+            foreach (var o in displayObjects)
+            {
+                if (o is Ball b)
+                {
+                    balls.balls.Add(b);
+                } else if (o is Brick br)
+                {
+                    bricks.bricks.Add(br);
+                } else if (o is Bonus bns)
+                {
+                    bonuses.bonuses.Add(bns);
+                } else if (o is Platform pl)
+                {
+                    platforms.platforms.Add(pl);
+                }
+            }
+            bonuses.SetBrick(bricks);
             displayObjects.Add(statusBar);
             displayObjects.Add(Messages.mLostGame); 
             displayObjects.Add(Messages.mWinGame);
@@ -57,6 +84,32 @@ namespace GameEngine
                 displayObjects.Add(obj);
             }
         }
+
+        public void CollisionEvent(object sender, CollisionEventArgs ev)
+        {
+            GameEntity o = (GameEntity)sender;
+            o.OnCollision(ev.withWho);
+        }
+
+        public void CheckGameState()
+        {
+            bool st = false;
+            foreach (var br in bricks.bricks)
+            {
+                if (br.visible && br.strength != 15)
+                {
+                    st = true;
+                }
+            }
+            if (!st)
+            {
+                Messages.mWinGame.ShowMessage();
+                foreach (var b in balls.balls)
+                {
+                    b.visible = false;
+                }
+            }
+        }
         
 
         public void CheckCollisions()
@@ -67,14 +120,9 @@ namespace GameEngine
                     foreach (var obj2 in displayObjects)
                     {
                         if(obj.Equals(obj2) || !obj2.visible) continue;
-                        if (obj is Bonus bonus)
-                        {
-                            string t;
-                        }
                         if (obj.CheckCollisions(obj2))
                         {
-                            
-                            obj.OnCollision(obj2);
+                           OnCollision?.Invoke(obj, new CollisionEventArgs(obj2));
                             break;
                         }
                     }
@@ -104,6 +152,8 @@ namespace GameEngine
                 }  
             }
         }
+        
+        
         
         public void DrawObjects(RenderWindow window)
         {

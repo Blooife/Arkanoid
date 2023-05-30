@@ -19,7 +19,7 @@ namespace GameEngine
             shape.FillColor = color;
             shape.Position = new Vector2f(0, 0);
             butMenu = new Button(600, 20, 70, 30, "Menu");
-            butMenu.Click += (sender, e) => { Game.Pause(); };
+            butMenu.Click += (sender, e) => { Game.Pause(null,null); };
             s = new Text(20, 200, 20, 100, 40, Game.player.GetStat());
         }
 

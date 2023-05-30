@@ -15,7 +15,7 @@ namespace GameEngine
         [JsonProperty]public int strength;
         public Bonus bonus;
 
-        public Brick(int x1, int y1,  int x2, int y2, int str, Color col)
+        public Brick(int x1, int y1,  int x2, int y2, int str, Color col, bool v)
         {
             type = "Brick";
             width = x2 - x1;
@@ -32,7 +32,7 @@ namespace GameEngine
             shape.OutlineThickness = 1;
             strength = str;
             isMoving = false;
-            visible = true;
+            visible = v;
             //bonus = new Bonus(x1,y1,"1");
         }
         public override void SerializeToText(string filename)
@@ -66,20 +66,10 @@ namespace GameEngine
         }
         public override void Move()
         {
-            /*if (bonus.visible)
-            {
-                bonus.Move();
-                bonus.draw(Game.Window);
-            }*/
         }
 
         public override void draw(RenderWindow window)
         {
-            /*if (bonus.visible)
-            {
-                bonus.Move();
-                bonus.draw(window);
-            }*/
             window.Draw(shape);
         }
         
@@ -97,7 +87,8 @@ namespace GameEngine
                 else if(strength == 0)
                 {
                     visible = false;
-                    bonus.visible = true; 
+                    bonus.visible = true;
+                    Game.gameField.CheckGameState();
                 }
             }
         }
@@ -113,11 +104,16 @@ namespace GameEngine
             bricks = new List<Brick>();
             for (int i = 1; i < 10; i++)
             {
-                bricks.Add(new Brick(i*70+5, 100,i*70+70, 120, 1, Color.Blue));
-                bricks.Add(new Brick(i*70+5, 120,i*70+70, 140, 2, Color.Red));
-                bricks.Add(new Brick(i*70+5, 140,i*70+70, 160, 1, Color.Blue));
-                bricks.Add(new Brick(i*70+5, 160,i*70+70, 180, 2, Color.Red));
+                bricks.Add(new Brick(i*70+5, 100,i*70+70, 120, 1, Color.Blue, true));
+                bricks.Add(new Brick(i*70+5, 120,i*70+70, 140, 2, Color.Red, true));
+                bricks.Add(new Brick(i*70+5, 140,i*70+70, 160, 1, Color.Blue, true));
+                bricks.Add(new Brick(i*70+5, 160,i*70+70, 180, 2, Color.Red, true));
             }
+        }
+        
+        public Bricks(int n)
+        {
+            
         }
     }
 }

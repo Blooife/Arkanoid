@@ -100,6 +100,7 @@
     <Compile Include="Bonus.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="Button.cs" />
+    <Compile Include="CollisionEventArgs.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameEntity.cs" />
     <Compile Include="GameField.cs" />

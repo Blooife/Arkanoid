@@ -12,13 +12,31 @@ namespace GameEngine
         public static GameField gameField;
         public static Menu menu=new Menu();
         public static Proxy serialize = new Proxy();
-        public static RenderWindow Window;
+        public static RenderWindow window;
         public static bool pause;
         public static Random rndm = new Random();
+        
+        
+        public static event EventHandler<EventArgs> GamePause;
+        public static event EventHandler<EventArgs> GameContinue;
+       // public event EventHandler<EventArgs> GameSave;
+        public static event EventHandler<EventArgs> GameNew;
+        /*public event EventHandler<EventArgs> GameLoad;
+        public event EventHandler<EventArgs> GameSettings;
+        public event EventHandler<EventArgs> GameExit;*/
+        
+        
 
         public Game()
         {
             gameField = new GameField();
+            GameContinue += Continue;
+            GameNew += NewGame;
+            /*GameSave += Save;
+            GameLoad += Load;
+            GameSettings += ShowSettings;
+            GameExit += Exit;*/
+            GamePause += Pause;
             gameField.displayObjects.Add(menu);
             settings.AddToList(gameField.displayObjects);
             menu.ShowMenu();
@@ -26,38 +44,45 @@ namespace GameEngine
 
         public void Start()
         {
-            Window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
-            Window.Position = new Vector2i(0, 0);
+            window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
+            window.Position = new Vector2i(0, 0);
             settings.size = new Vector2i(1366, 728);
             ChangeWindowSize(1366,728,0,0);
-            Window.SetFramerateLimit(60);
-            NewGame();
-            Pause();
-            Window.SetKeyRepeatEnabled(false);
-            Window.Clear(Color.White);
-            Window.Closed += (sender, args) => Window.Close();
-            while (Window.IsOpen)
+            window.SetFramerateLimit(60);                                                                         GameNew?.Invoke(null,null);   GamePause?.Invoke(null,null);
+            Clock clock = new Clock();
+            Time timeSinceLastUpdate = Time.Zero;
+            Time timePerFrame = Time.FromSeconds(1 / 144f);
+            window.SetKeyRepeatEnabled(false);
+            window.Clear(Color.White);
+            window.Closed += (sender, args) => window.Close();
+            while (window.IsOpen)
             {
-                Window.DispatchEvents();
-                Window.Clear(Color.White);
-                if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
+                Time dt = clock.Restart();
+                timeSinceLastUpdate += dt;
+                while (timeSinceLastUpdate >= timePerFrame)
                 {
-                    Pause();
+                    timeSinceLastUpdate -= timePerFrame;
+                    window.DispatchEvents();
+                    window.Clear(Color.White);
+                    if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
+                    {
+                        GamePause?.Invoke(null,null);
+                    }
+                    if (!pause)
+                    {
+                        gameField.MoveObjects();
+                        gameField.CheckCollisions();
+                    }
+                    gameField.DrawObjects(window);
+                    window.Display();
                 }
-                if (!pause)
-                {
-                    gameField.MoveObjects();
-                    gameField.CheckCollisions();
-                }
-                gameField.DrawObjects(Window);
-                Window.Display();
             }
         }
 
-        public static void NewGame()
+        public static void NewGame(object sender, EventArgs e)
         {
             gameField.displayObjects.Clear();
-            Continue();
+            GameContinue?.Invoke(null,null);
             gameField.NewGame();
             player.stat.lives = 3;
             player.stat.score = 0;
@@ -65,40 +90,40 @@ namespace GameEngine
             settings.AddToList(gameField.displayObjects);
         }
 
-        public static void Pause()
+        public static void Pause(object sender, EventArgs e)
         {
             pause = true;
             menu.ShowMenu();
         }
 
-        public static void Save()
+        public static void Save(object sender, EventArgs e)
         {
             serialize.SerializeToText(gameField.displayObjects,player,settings);                                                                             serialize.SerializeText(gameField.displayObjects, player, settings);
             serialize.SerializeJson(gameField.displayObjects, player, settings);
         }
 
-        public static void Continue()
+        public static void Continue(object sender, EventArgs e)
         {
             pause = false;
             menu.HideMenu();
         }
-        public static void LoadJson()
+        public static void LoadJson(object sender, EventArgs e)
         {
             gameField.displayObjects.Clear(); 
             serialize.DeserializeJsonFile(gameField.displayObjects, player, settings);      
             gameField.Update();
-            Continue();
+            GameContinue?.Invoke(null,null);
         }
-        public static void Load()
+        public static void Load(object sender, EventArgs e)
         {
             gameField.displayObjects.Clear(); 
             serialize.DeserializeJsonFile(gameField.displayObjects, player, settings);
             //serialize.DeserializeText(gameField.displayObjects, player, settings);
             gameField.Update();
-            Continue();
+            GameContinue?.Invoke(null,null);
         }
 
-        public static void ShowSettings()
+        public static void ShowSettings(object sender, EventArgs e)
         {
             menu.visible = false;
             settings.SettingsVisible(true);
@@ -107,7 +132,7 @@ namespace GameEngine
         public static void UpdateDifficulty()
         {
             gameField.displayObjects.Clear();
-            Continue();
+            GameContinue?.Invoke(null,null);
             gameField.NewGame();
             player.stat.lives = 3;
             player.stat.score = 0;
@@ -119,16 +144,16 @@ namespace GameEngine
 
         public static void ChangeWindowSize(uint x, uint y, int px, int py)
         {
-            Window.Size = new Vector2u(x, y);
+            window.Size = new Vector2u(x, y);
             pause = false;
-            Window.Position = new Vector2i(px,py);
+            window.Position = new Vector2i(px,py);
             foreach (var o in gameField.displayObjects)
             {
                 o.UpdateSize();
             }
         }
 
-        public static void Exit()
+        public static void Exit(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

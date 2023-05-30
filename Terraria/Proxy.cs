@@ -100,11 +100,17 @@ namespace GameEngine
                     case "Brick":
                     {
                         objs.Add(new Brick((int)obj.x1, (int)obj.y1, (int)obj.x2,(int)obj.y2, (int)obj.strength,new Color(
-                            (byte)obj.color.R,(byte)obj.color.G,(byte)obj.color.B)));   
+                            (byte)obj.color.R,(byte)obj.color.G,(byte)obj.color.B), (bool)obj.visible));   
+                        break;
+                    }
+                    case "Bonus":
+                    {
+                        objs.Add(new Bonus("", (BonusType)obj.Btype, (bool)obj.visible,  (int)obj.x1, (int)obj.y1));
                         break;
                     }
                 }
             }
+            
             string jsonPl =
                 File.ReadAllText(path+"player.json");
             Player pl = JsonConvert.DeserializeObject<Player>(jsonPl);

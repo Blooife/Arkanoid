@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
@@ -39,7 +40,8 @@ namespace GameEngine
             );
             if (shape.GetGlobalBounds().Contains(newMousePos.X, newMousePos.Y) && Mouse.IsButtonPressed(Mouse.Button.Left))
             {
-                //Mouse.SetPosition(new Vector2i(mousePos.X, mousePos.Y+30), window);
+                if(this.text.DisplayedString == "OK")
+                    Thread.Sleep(400);
                 return true;
             }
             return false;

@@ -1,4 +1,5 @@
 
+using System;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
@@ -12,18 +13,23 @@ namespace GameEngine
 
         public GameMessage(string str)
         {
-            shape = new RectangleShape(new Vector2f(300, 200));
+            shape = new RectangleShape(new Vector2f(200, 120));
             shape.FillColor = new Color(100,107,99);
-            shape.Position = new Vector2f(250, 200);
+            shape.Position = new Vector2f(350, 200);
             shape.OutlineColor = Color.Black;
             shape.OutlineThickness = 1;
-            butOk = new Button(300, 340, 200, 50, "ok");
-            butOk.Click += (sender, e) => HideMessage();
-            message = new Text(30,  250,200,300,150, str);
+            butOk = new Button(400, 270, 100, 30, "OK");
+            butOk.Click += OnBOKClick;
+            message = new Text(20,  350,200,200,100, str);
             visible = false;
             isMoving = false;
         }
 
+        public void OnBOKClick(object sender, EventArgs e)
+        {
+            HideMessage();
+            Game.Pause(null,null);
+        }
         public void ShowMessage()
         {
             visible = true;
@@ -59,15 +65,8 @@ namespace GameEngine
 
         public Messages()
         {
-            //mLostLives = new GameMessage("You lost a live. Enter ok to continue");
             mLostGame = new GameMessage("You lost");
             mWinGame = new GameMessage("You won");
-            /*mLostGame.butOK.Click -= (sender, e) =>  mLostGame.HideMessage(); 
-            mLostGame.butOK.Click += (sender, e) =>
-            {
-                mLostGame.HideMessage();
-                Game.Pause();
-            };*/
         }
     }
 }

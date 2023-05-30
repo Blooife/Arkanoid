@@ -142,7 +142,7 @@ namespace GameEngine
             volume = v;
             difficulty = d;
             size = new Vector2i(x, y);
-            Game.Window.Size = new Vector2u((uint)size.X, (uint)size.Y);
+            Game.window.Size = new Vector2u((uint)size.X, (uint)size.Y);
         }
         
         public void SerializeToText(string filename)
@@ -169,8 +169,8 @@ namespace GameEngine
         }
         public void SerializeObject(object obj, string filePath)
         {
-            Type type = obj.GetType();
-            FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            Type typ = obj.GetType();
+            FieldInfo[] fields = typ.GetFields(BindingFlags.Public | BindingFlags.Instance);
             List<string> lines = new List<string>();
             foreach (FieldInfo field in fields)
             {

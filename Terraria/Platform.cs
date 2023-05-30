@@ -34,7 +34,7 @@ namespace GameEngine
             height = y2 - y1;
         }
 
-        public override void ChangeWidth(int w)
+        public void ChangeWidth(int w)
         {
             if (w > 0)
             {
@@ -126,12 +126,16 @@ namespace GameEngine
 
     public class Platforms
     {
-        public List<Platform> platforms;
+        public List<Platform> platforms = new List<Platform>();
 
         public Platforms()
         {
-            platforms = new List<Platform>();
             platforms.Add(new Platform(350, 570, 470, 590, Color.Green, 6));
+        }
+        
+        public Platforms(int n)
+        {
+            
         }
         
     }

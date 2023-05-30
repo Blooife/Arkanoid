@@ -102,18 +102,6 @@ namespace GameEngine
 
         public bool CheckCollisions(GameEntity obj)
         {
-            /*bool res = false;
-            int distX = Math.Abs(x - obj.x) - obj.width/2;
-            int distY = Math.Abs(y - obj.y) - obj.height/2;
-
-            if (distX + 1 < this.width/2 && distY + 1 < this.width/2) {
-                res = true;
-                if (distX < distY)
-                    ChangeDirectionY(obj);
-                else
-                    ChangeDirectionX(obj);
-            }
-            return res;*/
             if(y2 >= obj.y1 && y1 <= obj.y2)
                 if (x2 >= obj.x1 && x1 <= obj.x2)
                 {
@@ -121,8 +109,6 @@ namespace GameEngine
                 }
             return false;
         }
-        
-        public virtual void ChangeWidth(int w){}
 
         public virtual void SerializeToText(string filename) {}
         
@@ -130,8 +116,8 @@ namespace GameEngine
 
         public virtual void OnCollision(GameEntity obj)
         {
+            
         }
-
 
     }
 }

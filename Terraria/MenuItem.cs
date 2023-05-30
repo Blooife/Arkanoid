@@ -31,19 +31,18 @@ namespace GameEngine
 
         public Menu()
         {
-            items[0].Click += (sender, e) => { Game.Continue(); };
-            items[1].Click += (sender, e) => { Game.NewGame(); };
-            items[2].Click += (sender, e) => { Game.Save(); };
-            items[3].Click += (sender, e) => { Game.Load(); };
-            items[4].Click += (sender, e) => { Game.LoadJson(); };
-            items[5].Click += (sender, e) => { Game.ShowSettings(); };
-            items[6].Click += (sender, e) => { Game.Exit(); };
+            items[0].Click += Game.Continue;
+            items[1].Click += Game.NewGame;
+            items[2].Click += Game.Save;
+            items[3].Click += Game.Load;
+            items[4].Click += Game.LoadJson;
+            items[5].Click += Game.ShowSettings;
+            items[6].Click += Game.Exit; 
             visible = false;
             isMoving = false;
             shape = new RectangleShape(new Vector2f(400, 400));
             shape.OutlineColor = Color.Transparent;
             shape.OutlineThickness = 1;
-           // color = new Color(100,107,99);
             color = Color.Transparent;
             shape.FillColor = color;
             shape.Position = new Vector2f(200, 50);
