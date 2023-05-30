@@ -7,8 +7,6 @@ namespace GameEngine
 {
     public class Button: Text
     {
-        private Vector2i lastMousePos = new Vector2i();
-        private bool isPressed;
         public Button(int x, int y, int width, int height, string str):base(str)
         {
             x1 = x;
@@ -65,6 +63,12 @@ namespace GameEngine
             {
                 OnClick();
             }
+        }
+
+        public void ChangeColor(Color c)
+        {
+            color = c;
+            shape.FillColor = color;
         }
         
         public override void draw(RenderWindow window)

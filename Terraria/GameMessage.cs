@@ -1,15 +1,14 @@
-using GameEngine;
+
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
-using Text = GameEngine.Text;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class GameMessage: GameEntity
     {
         public Text message;
-        public Button butOK;
+        public Button butOk;
 
         public GameMessage(string str)
         {
@@ -18,8 +17,8 @@ namespace Arkanoid
             shape.Position = new Vector2f(250, 200);
             shape.OutlineColor = Color.Black;
             shape.OutlineThickness = 1;
-            butOK = new Button(300, 340, 200, 50, "ok");
-            butOK.Click += (sender, e) => HideMessage();
+            butOk = new Button(300, 340, 200, 50, "ok");
+            butOk.Click += (sender, e) => HideMessage();
             message = new Text(30,  250,200,300,150, str);
             visible = false;
             isMoving = false;
@@ -33,9 +32,9 @@ namespace Arkanoid
 
         public override void draw(RenderWindow window)
         {
-            butOK.CheckClick(window,Mouse.GetPosition(window));
+            butOk.CheckClick(window,Mouse.GetPosition(window));
             window.Draw(shape);
-            butOK.draw(window);
+            butOk.draw(window);
             message.draw(window);
         }
 
@@ -54,13 +53,13 @@ namespace Arkanoid
 
     public class Messages
     {
-        public GameMessage mLostLives;
+        //public GameMessage mLostLives;
         public GameMessage mLostGame;
         public GameMessage mWinGame;
 
         public Messages()
         {
-            mLostLives = new GameMessage("You lost a live. Enter ok to continue");
+            //mLostLives = new GameMessage("You lost a live. Enter ok to continue");
             mLostGame = new GameMessage("You lost");
             mWinGame = new GameMessage("You won");
             /*mLostGame.butOK.Click -= (sender, e) =>  mLostGame.HideMessage(); 

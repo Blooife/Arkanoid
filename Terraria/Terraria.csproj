@@ -100,7 +100,6 @@
     <Compile Include="Bonus.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="Button.cs" />
-    <Compile Include="DisplayContent.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameEntity.cs" />
     <Compile Include="GameField.cs" />
@@ -120,7 +119,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Akshar-Bold.ttf" />
+    <Content Include="bSprites\бонус.PNG" />
+    <Content Include="bSprites\бонус1.PNG" />
+    <Content Include="bSprites\бонус2.PNG" />
+    <Content Include="bSprites\бонус3.PNG" />
+    <Content Include="bSprites\бонус4.PNG" />
+    <Content Include="bSprites\бонус5.PNG" />
+    <Content Include="bSprites\бонус6.PNG" />
     <Content Include="files\player.json" />
+    <Content Include="files\s.txt" />
     <Content Include="files\save.json" />
     <Content Include="files\save.txt" />
     <Content Include="files\settings.json" />

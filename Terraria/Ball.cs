@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.System;
 
-namespace Arkanoid
+namespace GameEngine
 {
     [Serializable]
     [JsonObject(MemberSerialization.OptIn)]
@@ -44,16 +44,17 @@ namespace Arkanoid
             {
                 float scaleX =(float) Game.Window.Size.X / 800;
                 float scaleY = (float)Game.Window.Size.Y / 600;
-                float scale = Math.Min(scaleX, scaleY);
-                shape = new CircleShape(10);
+                //float scale = Math.Min(scaleX, scaleY);
+                if(Game.Window.Size.X >=1200)
+                    shape = new CircleShape(10);
                 shape.FillColor = color;
                 shape.Scale = new Vector2f(scaleY, scaleX); 
             }
             else
             {
-                float scaleX =(float) Game.Window.Size.X / 800;
-                float scaleY = (float)Game.Window.Size.Y / 600;
-                float scale = Math.Min(scaleX, scaleY);
+               // float scaleX =(float) Game.Window.Size.X / 800;
+                //float scaleY = (float)Game.Window.Size.Y / 600;
+               // float scale = Math.Min(scaleX, scaleY);
                 shape = new CircleShape(15);
                 shape.FillColor = color;
                 shape.Scale = new Vector2f(1, 1);
@@ -113,12 +114,11 @@ namespace Arkanoid
                     {
                         if (Game.player.stat.lives <= 1)
                         {
-                            GameField.messages.mLostGame.ShowMessage();
+                            GameField.Messages.mLostGame.ShowMessage();
                             return;
                         }
                         else
                         {
-                            GameField.messages.mLostLives.ShowMessage();
                             Game.player.stat.lives--;
                             x1 = 350;
                             x2 = 380;
@@ -139,42 +139,26 @@ namespace Arkanoid
             shape.Position = new Vector2f(x1, y1);
         }
 
-        public override void ChangeDirectionX(GameEntity obj)
+        public override void OnCollision(GameEntity obj)
         {
-            direction = (float)(Math.PI) - direction;
-            if (obj is Brick brick)
+            if(!(obj is Bonus))
             {
-                Game.player.stat.score++;
-                brick.decreaseStrength();
+                if (y1 >= obj.y2 || y2 <= obj.y1)
+                {
+                    direction = - direction;
+                }
+                else
+                {
+                    direction = (float)(Math.PI) - direction;
+                }
+                if (obj is Brick brick)
+                {
+                    Game.player.stat.score++;
+                    brick.decreaseStrength();
+                } 
             }
-        }
-
-        public override void ChangeDirectionY(GameEntity obj)
-        {
-            direction = - direction;
-            if (obj is Brick brick)
-            {
-                Game.player.stat.score++;
-                brick.decreaseStrength();
-            }
-        }
-
-        public override void ChangeDirection(GameEntity obj)
-        {
             
-            if (y1 >= obj.y2 || y2 <= obj.y1)
-            {
-                direction = - direction;
-            }
-            else
-            {
-                direction = (float)(Math.PI) - direction;
-            }
-            if (obj is Brick brick)
-            {
-                Game.player.stat.score++;
-                brick.decreaseStrength();
-            }
+            
             /*if (leftY >= obj.leftY && rightY <= obj.rightY )
             {
                 if (leftX <= obj.leftX)
@@ -212,7 +196,7 @@ namespace Arkanoid
 
     public class Balls
     {
-        public List<Ball> balls = new List<Ball>();
+        public List<Ball> balls;
         public Balls()
         { 
             balls = new List<Ball>();

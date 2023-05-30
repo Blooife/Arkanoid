@@ -1,5 +1,4 @@
-﻿using System;
-using Arkanoid;
+﻿
 
 namespace GameEngine
 {
@@ -7,7 +6,7 @@ namespace GameEngine
     {
         
 
-        static void Main(string[] args)
+        static void Main()
         { 
             Game game = new Game();
             game.Start();

@@ -1,9 +1,8 @@
-using GameEngine;
+
 using SFML.Graphics;
 using SFML.System;
-using Text = GameEngine.Text;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class StatusBar: GameEntity
     {

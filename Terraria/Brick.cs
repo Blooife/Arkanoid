@@ -1,20 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.System;
 
 
-namespace Arkanoid
+namespace GameEngine
 {
     [Serializable]
     [JsonObject(MemberSerialization.OptIn)]
     public class Brick: GameEntity
     {
         [JsonProperty]public int strength;
-        public Bonuses bonuses;
+        public Bonus bonus;
 
         public Brick(int x1, int y1,  int x2, int y2, int str, Color col)
         {
@@ -32,8 +31,9 @@ namespace Arkanoid
             shape.OutlineColor= Color.Black;
             shape.OutlineThickness = 1;
             strength = str;
-            isMoving = true;
+            isMoving = false;
             visible = true;
+            //bonus = new Bonus(x1,y1,"1");
         }
         public override void SerializeToText(string filename)
         {
@@ -62,26 +62,45 @@ namespace Arkanoid
             type = "Brick";
             width = x2 - x1;
             height = y2 - y1;
+            //bonus = new Bonus(x1,y1, "1");
         }
         public override void Move()
         {
-            
+            /*if (bonus.visible)
+            {
+                bonus.Move();
+                bonus.draw(Game.Window);
+            }*/
         }
+
+        public override void draw(RenderWindow window)
+        {
+            /*if (bonus.visible)
+            {
+                bonus.Move();
+                bonus.draw(window);
+            }*/
+            window.Draw(shape);
+        }
+        
 
         public void decreaseStrength()
         {
-            strength -= 1;
-            if (strength == 1)
+            if (strength != 15)
             {
-                color = Color.Blue;
-                shape.FillColor = color;
-            }
-            else if(strength == 0)
-            {
-                visible = false;
+                strength -= 1;
+                if (strength == 1)
+                {
+                    color = Color.Blue;
+                    shape.FillColor = color;
+                }
+                else if(strength == 0)
+                {
+                    visible = false;
+                    bonus.visible = true; 
+                }
             }
         }
-        
     }
 
     public class Bricks
@@ -92,7 +111,6 @@ namespace Arkanoid
         public Bricks()
         {
             bricks = new List<Brick>();
-          //  bricks.Add(new Brick(50,100,100,120,1,Color.Blue,false));
             for (int i = 1; i < 10; i++)
             {
                 bricks.Add(new Brick(i*70+5, 100,i*70+70, 120, 1, Color.Blue));
@@ -100,7 +118,6 @@ namespace Arkanoid
                 bricks.Add(new Brick(i*70+5, 140,i*70+70, 160, 1, Color.Blue));
                 bricks.Add(new Brick(i*70+5, 160,i*70+70, 180, 2, Color.Red));
             }
-               
         }
     }
 }

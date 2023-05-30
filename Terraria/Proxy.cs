@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Arkanoid;
 using Newtonsoft.Json;
 using SFML.Graphics;
 
@@ -11,16 +10,18 @@ namespace GameEngine
     public class Proxy
     {
         private string path = "C:/Users/Asus/Desktop/TerraEngine-master/TerraEngine-master/Terraria/files/";
-        public void SerializeText(List<GameEntity> objs, Player player, Settings settings)
+        
+
+        public void SerializeToText(List<GameEntity> objs, Player player, Settings settings)
         {
-            
-            File.WriteAllText(path+"save.txt","");
+            settings.SerializeObject(settings,path+"s.txt");
+            File.WriteAllText(path + "s.txt", "");
             foreach (var obj in objs)
             {
-                obj.SerializeToText(path+"save.txt");
+                obj.SerializeObject(obj, path+"s.txt");
             }
-            player.SerializeToText(path+"save.txt");
-            settings.SerializeToText(path+"save.txt");
+            player.SerializeObject(player,path+"s.txt");
+            
         }
 
         public void DeserializeText(List<GameEntity> objs, Player player, Settings settings)
@@ -62,7 +63,7 @@ namespace GameEngine
 
         public void SerializeJson(List<GameEntity> objs,Player player, Settings settings)
         {
-            string jsonString = "";
+            string jsonString;
             jsonString = JsonConvert.SerializeObject(objs, Formatting.Indented);
             string jsonPLayer = JsonConvert.SerializeObject(player, Formatting.Indented);
             string jsonSettings = JsonConvert.SerializeObject(settings, Formatting.Indented);
@@ -73,6 +74,10 @@ namespace GameEngine
 
         public void DeserializeJsonFile(List<GameEntity> objs, Player player, Settings settings)
         {
+            string jsonSettings =
+                File.ReadAllText(path+"settings.json");
+            Settings sn = JsonConvert.DeserializeObject<Settings>(jsonSettings);
+            settings.UpdateSettings(sn.level, sn.volume, sn.difficulty, sn.size.X, sn.size.Y);
             string json =
                 File.ReadAllText(path+"save.json");
             List<dynamic> deserializedObjects = JsonConvert.DeserializeObject<List<dynamic>>(json);
@@ -104,10 +109,20 @@ namespace GameEngine
                 File.ReadAllText(path+"player.json");
             Player pl = JsonConvert.DeserializeObject<Player>(jsonPl);
             player.UpdateStat(pl.stat.name, pl.stat.score, pl.stat.lives);
-            string jsonSettings =
-                File.ReadAllText(path+"settings.json");
-            Settings sn = JsonConvert.DeserializeObject<Settings>(jsonSettings);
-            settings.UpdateSettings(sn.level, sn.volume, sn.difficulty, sn.size.X, sn.size.Y);
+            
+        }
+        
+        public void SerializeText(List<GameEntity> objs, Player player, Settings settings)
+        {
+            File.WriteAllText(path+"save.txt","");
+            settings.SerializeToText(path+"save.txt");
+            foreach (var obj in objs)
+            {
+                obj.SerializeToText(path+"save.txt");
+                obj.SerializeToText(path+"s.txt");
+            }
+            player.SerializeToText(path+"save.txt");
+            
         }
     }
 }

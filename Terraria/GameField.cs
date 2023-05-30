@@ -1,45 +1,53 @@
 using System.Collections.Generic;
-using GameEngine;
 using SFML.Graphics;
-using SFML.Window;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class GameField
     {
-        private int X, Y, X1, Y1;
-        public List<GameEntity> displayObjects = new List<GameEntity>();
+        public readonly List<GameEntity> displayObjects = new List<GameEntity>();
         Balls balls;
         Bricks bricks;
-        Platforms platforms; 
-        StatusBar statusBar = new StatusBar(); 
-        public static Messages messages = new Messages();
-        public GameField()
-        {
-        }
+        Platforms platforms;
+        public Bonuses bonuses;
+        readonly StatusBar statusBar = new StatusBar(); 
+        public static readonly Messages Messages = new Messages();
 
         public void NewGame()
         {
             balls = new Balls();
             bricks = new Bricks();
             platforms = new Platforms();
-            AddObjects(balls.balls.ToArray());
-            AddObjects(bricks.bricks.ToArray());
-            AddObjects(platforms.platforms.ToArray());
+            bonuses = new Bonuses();
+            foreach (var b in balls.balls)
+            {
+                displayObjects.Add(b);
+            }
+            foreach (var b in bricks.bricks)
+            {
+                displayObjects.Add(b);
+            }
+            foreach (var b in platforms.platforms)
+            {
+                displayObjects.Add(b);
+            }
+            foreach (var b in bonuses.bonuses)
+            {
+                displayObjects.Add(b);
+            }
+            bonuses.SetBrick(bricks);
             displayObjects.Add(statusBar);
-            displayObjects.Add(messages.mLostLives);
-            displayObjects.Add(messages.mLostGame);
-            displayObjects.Add(messages.mWinGame);
+            displayObjects.Add(Messages.mLostGame);
+            displayObjects.Add(Messages.mWinGame);
         }
 
         public void Update()
         {
             displayObjects.Add(statusBar);
-            displayObjects.Add(messages.mLostLives);
-            displayObjects.Add(messages.mLostGame); 
-            displayObjects.Add(messages.mWinGame);
+            displayObjects.Add(Messages.mLostGame); 
+            displayObjects.Add(Messages.mWinGame);
             displayObjects.Add(Game.menu);
-            AddObjects(Game.settings.listBtn.ToArray());
+            Game.settings.AddToList(displayObjects);
         }
         
         public void AddObjects(GameEntity[] objects)
@@ -59,10 +67,14 @@ namespace Arkanoid
                     foreach (var obj2 in displayObjects)
                     {
                         if(obj.Equals(obj2) || !obj2.visible) continue;
-                        
+                        if (obj is Bonus bonus)
+                        {
+                            string t;
+                        }
                         if (obj.CheckCollisions(obj2))
                         {
-                            obj.ChangeDirection(obj2);
+                            
+                            obj.OnCollision(obj2);
                             break;
                         }
                     }

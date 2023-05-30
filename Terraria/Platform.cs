@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace Arkanoid
+namespace GameEngine
 {
     [Serializable]
     [JsonObject(MemberSerialization.OptIn)]
@@ -33,6 +32,31 @@ namespace Arkanoid
             visible = true;
             width = x2 - x1;
             height = y2 - y1;
+        }
+
+        public override void ChangeWidth(int w)
+        {
+            if (w > 0)
+            {
+                if (width < 140)
+                {
+                    width += 20;
+                    x2 += 20;  
+                }
+            }
+            else
+            {
+                if (width > 100)
+                {
+                    width -= 20;
+                    x2 -= 20;
+                }
+            }
+            shape = new RectangleShape(new Vector2f(x2-x1,y2-y1));
+            shape.Position = new Vector2f(x1,y1);
+            shape.FillColor = color;
+            shape.OutlineColor= Color.Black;
+            shape.OutlineThickness = 1;
         }
 
         public void UpdateSpeed(int sp)
@@ -73,7 +97,6 @@ namespace Arkanoid
         { 
             bool moveLeft = Keyboard.IsKeyPressed(Keyboard.Key.A);
             bool moveRight = Keyboard.IsKeyPressed(Keyboard.Key.D);
-            Keyboard.Key k;
             if (moveLeft || moveRight)
             {
                 if (moveLeft)
@@ -81,7 +104,7 @@ namespace Arkanoid
                     x1 = (x1 - speed);
                     x2 = (x2 - speed);
                 }
-                else if (moveRight)
+                if (moveRight)
                 {
                     x1 = (x1 + speed);
                     x2 = (x2 + speed);

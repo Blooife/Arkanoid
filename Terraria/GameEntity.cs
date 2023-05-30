@@ -1,15 +1,15 @@
 using System;
-using System.Data;
-using System.Text.Json.Serialization;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.System;
-using SFML.Window;
 
-namespace Arkanoid
+namespace GameEngine
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public abstract class GameEntity : SFML.Graphics.Drawable
+    public abstract class GameEntity : Drawable
     {
         public Shape shape;
         [JsonProperty] public float x1, y1, x2, y2;
@@ -45,6 +45,55 @@ namespace Arkanoid
             shape.Position = new Vector2f(x1, y1);
             window.Draw(shape);
         }
+        
+        public void SerializeObject(object obj, string filePath)
+        {
+            Type type = obj.GetType();
+            FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            List<string> lines = new List<string>();
+            int i = 0;
+            foreach (FieldInfo field in fields)
+            {
+                    string fieldName = field.Name;
+                    object fieldValue = field.GetValue(obj);
+                    lines.Add(fieldName + ":" + fieldValue);
+                    i++;
+            }
+            File.AppendAllLines(filePath, lines);
+        }
+
+        public T DeserializeObject<T>(string filePath) where T : new()
+        {
+            T obj = new T();
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                Type type = typeof(T);
+                FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] parts = line.Split('=');
+
+                    if (parts.Length == 2)
+                    {
+                        string fieldName = parts[0].Trim();
+                        string fieldValue = parts[1].Trim();
+
+                        FieldInfo field = Array.Find(fields, f => f.Name.Equals(fieldName, StringComparison.OrdinalIgnoreCase));
+
+                        if (field != null)
+                        {
+                            object value = Convert.ChangeType(fieldValue, field.FieldType);
+                            field.SetValue(obj, value);
+                        }
+                    }
+                }
+            }
+
+            return obj;
+        }
 
         public virtual void UpdateSize()
         {
@@ -72,18 +121,14 @@ namespace Arkanoid
                 }
             return false;
         }
+        
+        public virtual void ChangeWidth(int w){}
 
         public virtual void SerializeToText(string filename) {}
         
         public virtual void DeserializeFromText(string[] prop){}
 
-        public virtual void ChangeDirection(GameEntity obj)
-        {
-        }
-        public virtual void ChangeDirectionX(GameEntity obj)
-        {
-        }
-        public virtual void ChangeDirectionY(GameEntity obj)
+        public virtual void OnCollision(GameEntity obj)
         {
         }
 

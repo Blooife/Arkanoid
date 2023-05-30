@@ -1,4 +1,3 @@
-using Arkanoid;
 using SFML.Graphics;
 using SFML.System;
 
@@ -44,6 +43,7 @@ namespace GameEngine
 
         public override void draw(RenderWindow window)
         {
+           // text.Position = new Vector2f(x1, y1);
             window.Draw(text);
         }
 

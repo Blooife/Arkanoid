@@ -1,17 +1,9 @@
 using System;
-using System.Collections.Generic;
 using SFML.Graphics;
 using SFML.Window;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Threading;
-using System.Xml.Serialization;
-using GameEngine;
 using SFML.System;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class Game
     {
@@ -20,14 +12,15 @@ namespace Arkanoid
         public static GameField gameField;
         public static Menu menu=new Menu();
         public static Proxy serialize = new Proxy();
-        public static RenderWindow Window { get; set; }
-        public static bool pause = false;
+        public static RenderWindow Window;
+        public static bool pause;
+        public static Random rndm = new Random();
 
         public Game()
         {
             gameField = new GameField();
             gameField.displayObjects.Add(menu);
-            gameField.AddObjects(settings.listBtn.ToArray());
+            settings.AddToList(gameField.displayObjects);
             menu.ShowMenu();
         }
 
@@ -35,7 +28,11 @@ namespace Arkanoid
         {
             Window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
             Window.Position = new Vector2i(0, 0);
+            settings.size = new Vector2i(1366, 728);
+            ChangeWindowSize(1366,728,0,0);
             Window.SetFramerateLimit(60);
+            NewGame();
+            Pause();
             Window.SetKeyRepeatEnabled(false);
             Window.Clear(Color.White);
             Window.Closed += (sender, args) => Window.Close();
@@ -65,7 +62,7 @@ namespace Arkanoid
             player.stat.lives = 3;
             player.stat.score = 0;
             gameField.displayObjects.Add(menu);
-            gameField.AddObjects(settings.listBtn.ToArray());
+            settings.AddToList(gameField.displayObjects);
         }
 
         public static void Pause()
@@ -76,7 +73,7 @@ namespace Arkanoid
 
         public static void Save()
         {
-            serialize.SerializeText(gameField.displayObjects, player, settings);
+            serialize.SerializeToText(gameField.displayObjects,player,settings);                                                                             serialize.SerializeText(gameField.displayObjects, player, settings);
             serialize.SerializeJson(gameField.displayObjects, player, settings);
         }
 
@@ -95,7 +92,8 @@ namespace Arkanoid
         public static void Load()
         {
             gameField.displayObjects.Clear(); 
-            serialize.DeserializeText(gameField.displayObjects, player, settings);
+            serialize.DeserializeJsonFile(gameField.displayObjects, player, settings);
+            //serialize.DeserializeText(gameField.displayObjects, player, settings);
             gameField.Update();
             Continue();
         }
@@ -114,25 +112,16 @@ namespace Arkanoid
             player.stat.lives = 3;
             player.stat.score = 0;
             gameField.displayObjects.Add(menu);
-            gameField.AddObjects(settings.listBtn.ToArray());
+            settings.AddToList(gameField.displayObjects);
             gameField.UpdateDifficulty(settings.difficulty);
             pause = false;
         }
 
         public static void ChangeWindowSize(uint x, uint y, int px, int py)
         {
-            VideoMode desktopMode = VideoMode.DesktopMode;
-            //View view = new View(new FloatRect(0, 0, 800, 600));
             Window.Size = new Vector2u(x, y);
-            Vector2i windowPosition = new Vector2i((int)
-                (desktopMode.Width - (int)x) / 2,(int)
-                (desktopMode.Height - (int)y) / 2
-            );
             pause = false;
             Window.Position = new Vector2i(px,py);
-            float scaleX =(float) Window.Size.X / 800;
-            float scaleY = (float)Window.Size.Y / 600;
-            float scale = Math.Min(scaleX, scaleY);
             foreach (var o in gameField.displayObjects)
             {
                 o.UpdateSize();

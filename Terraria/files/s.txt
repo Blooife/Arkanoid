@@ -1,0 +1,899 @@
+radius:15
+speed:6
+direction:-0,785398185253143
+shape:SFML.Graphics.CircleShape
+x1:500
+y1:210
+x2:528
+y2:240
+width:30
+height:30
+x:0
+y:0
+color:[Color] R(0) G(255) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Ball
+strength:0
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:75
+y1:100
+x2:140
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:75
+y1:120
+x2:140
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:75
+y1:140
+x2:140
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:0
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:75
+y1:160
+x2:140
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:145
+y1:100
+x2:210
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:145
+y1:120
+x2:210
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:145
+y1:140
+x2:210
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:145
+y1:160
+x2:210
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:215
+y1:100
+x2:280
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:215
+y1:120
+x2:280
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:215
+y1:140
+x2:280
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:215
+y1:160
+x2:280
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:285
+y1:100
+x2:350
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:285
+y1:120
+x2:350
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:285
+y1:140
+x2:350
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:285
+y1:160
+x2:350
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:355
+y1:100
+x2:420
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:355
+y1:120
+x2:420
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:355
+y1:140
+x2:420
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:355
+y1:160
+x2:420
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:425
+y1:100
+x2:490
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:425
+y1:120
+x2:490
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:425
+y1:140
+x2:490
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:425
+y1:160
+x2:490
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:495
+y1:100
+x2:560
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:495
+y1:120
+x2:560
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:495
+y1:140
+x2:560
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:495
+y1:160
+x2:560
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:565
+y1:100
+x2:630
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:565
+y1:120
+x2:630
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:565
+y1:140
+x2:630
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:565
+y1:160
+x2:630
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:0
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:635
+y1:100
+x2:700
+y2:120
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Brick
+strength:2
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:635
+y1:120
+x2:700
+y2:140
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(255) G(0) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:635
+y1:140
+x2:700
+y2:160
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+strength:1
+bonus:GameEngine.Bonus
+shape:SFML.Graphics.RectangleShape
+x1:635
+y1:160
+x2:700
+y2:180
+width:65
+height:20
+x:0
+y:0
+color:[Color] R(0) G(0) B(255) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Brick
+speed:6
+shape:SFML.Graphics.RectangleShape
+x1:392
+y1:570
+x2:512
+y2:590
+width:120
+height:20
+x:0
+y:0
+color:[Color] R(0) G(255) B(0) A(255)
+backgroundColor:0
+visible:True
+isMoving:True
+type:Platform
+butMenu:GameEngine.Button
+s:GameEngine.Text
+shape:SFML.Graphics.RectangleShape
+x1:0
+y1:0
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(100) G(107) B(99) A(255)
+backgroundColor:0
+visible:True
+isMoving:False
+type:
+message:GameEngine.Text
+ButOK:GameEngine.Button
+shape:SFML.Graphics.RectangleShape
+x1:0
+y1:0
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+message:GameEngine.Text
+ButOK:GameEngine.Button
+shape:SFML.Graphics.RectangleShape
+x1:0
+y1:0
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+items:GameEngine.Button[]
+shape:SFML.Graphics.RectangleShape
+x1:0
+y1:0
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:True
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Easy) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:230
+x2:540
+y2:260
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Normal) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:290
+x2:540
+y2:320
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Hard) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:350
+x2:540
+y2:380
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Difficulty) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:110
+y1:260
+x2:390
+y2:290
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Screen size) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:410
+y1:260
+x2:690
+y2:290
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Size 700*550) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:230
+x2:540
+y2:260
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Size 800*600) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:290
+x2:540
+y2:320
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Size 1024*600) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:410
+x2:540
+y2:440
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Size 1280*760) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:350
+x2:540
+y2:380
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(Size full) Font(Font) CharacterSize(15) OutlineThickness(0) Style(Regular)
+shape:SFML.Graphics.RectangleShape
+x1:260
+y1:470
+x2:540
+y2:500
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(219) G(215) B(210) A(255)
+backgroundColor:0
+visible:False
+isMoving:False
+type:
+stat:GameEngine.PlayerStatistics
+type:Player
+Ball
+500 210 528 240 0 255 255 6 -0,785398185253143
+Brick
+75 100 140 120 0 0 255 0
+Brick
+75 120 140 140 255 0 0 2
+Brick
+75 140 140 160 0 0 255 1
+Brick
+75 160 140 180 0 0 255 0
+Brick
+145 100 210 120 0 0 255 1
+Brick
+145 120 210 140 255 0 0 2
+Brick
+145 140 210 160 0 0 255 1
+Brick
+145 160 210 180 0 0 255 1
+Brick
+215 100 280 120 0 0 255 1
+Brick
+215 120 280 140 255 0 0 2
+Brick
+215 140 280 160 0 0 255 1
+Brick
+215 160 280 180 255 0 0 2
+Brick
+285 100 350 120 0 0 255 1
+Brick
+285 120 350 140 255 0 0 2
+Brick
+285 140 350 160 0 0 255 1
+Brick
+285 160 350 180 255 0 0 2
+Brick
+355 100 420 120 0 0 255 1
+Brick
+355 120 420 140 255 0 0 2
+Brick
+355 140 420 160 0 0 255 1
+Brick
+355 160 420 180 255 0 0 2
+Brick
+425 100 490 120 0 0 255 1
+Brick
+425 120 490 140 255 0 0 2
+Brick
+425 140 490 160 0 0 255 1
+Brick
+425 160 490 180 255 0 0 2
+Brick
+495 100 560 120 0 0 255 1
+Brick
+495 120 560 140 255 0 0 2
+Brick
+495 140 560 160 0 0 255 1
+Brick
+495 160 560 180 255 0 0 2
+Brick
+565 100 630 120 0 0 255 1
+Brick
+565 120 630 140 255 0 0 2
+Brick
+565 140 630 160 0 0 255 1
+Brick
+565 160 630 180 0 0 255 1
+Brick
+635 100 700 120 0 0 255 0
+Brick
+635 120 700 140 255 0 0 2
+Brick
+635 140 700 160 0 0 255 1
+Brick
+635 160 700 180 0 0 255 1
+Platform
+392 570 512 590 0 255 0 6

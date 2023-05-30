@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
-using Arkanoid;
+using System.Reflection;
 using Newtonsoft.Json;
+using SFML.Graphics;
 using SFML.System;
-using SFML.Window;
 
 namespace GameEngine
 {
@@ -16,8 +15,11 @@ namespace GameEngine
         [JsonProperty]public int volume;
         [JsonProperty]public int difficulty;
         [JsonProperty]public string type;
-        [JsonProperty] public Vector2i size = new Vector2i();
-        public List<Button> listBtn = new List<Button>();
+        [JsonProperty] public Vector2i size;
+        
+        public List<Button> listDiff = new List<Button>();
+        public List<Button> listSize = new List<Button>();
+        private Button btnClose;
         
         public Settings(int l, int v, int d, int x, int y)
         {
@@ -27,120 +29,113 @@ namespace GameEngine
             volume = v;
             type = "Settings";
             difficulty = d;
-            listBtn.Add(new Button(260, 230, 280, 30, "Easy"));
-            listBtn.Add(new Button(260, 290, 280, 30, "Normal"));
-            listBtn.Add(new Button(260, 350, 280, 30, "Hard"));
-            listBtn.Add(new Button(110, 260, 280, 30, "Difficulty"));
-            listBtn.Add(new Button(410, 260, 280, 30, "Screen size"));
-            listBtn.Add(new Button(260, 230, 280, 30, "Size 700*550"));
-            listBtn.Add(new Button(260, 290, 280, 30, "Size 800*600"));
-            listBtn.Add(new Button(260, 410, 280, 30, "Size 1024*600"));
-            listBtn.Add(new Button(260, 350, 280, 30, "Size 1280*760"));
-            listBtn.Add(new Button(260, 470, 280, 30, "Size full"));
-            listBtn[3].Click += (sender, args) => DifficultyOnClick();
-            listBtn[4].Click += ScreenSizeOnClick;
-            listBtn[0].Click += EasyOnClick;
-            listBtn[1].Click += NormalOnClick;
-            listBtn[2].Click += HardOnClick;
-            listBtn[5].Click += Size1OnClick;
-            listBtn[6].Click += Size2OnClick;
-            listBtn[7].Click += Size3OnClick;
-            listBtn[8].Click += Size5OnClick;
-            listBtn[9].Click += Size4OnClick;
-            DifficultyVisible(false);
-            ScreenSizeVisible(false);
+            btnClose = new Button(610, 480, 30, 30, "OK");
+            btnClose.Click += CloseSettings;
+            listDiff.Add(new Button(200, 230, 140, 40, "Super easy"));
+            listDiff.Add(new Button(200, 280, 140, 40, "Easy"));
+            listDiff.Add(new Button(200, 330, 140, 40, "Normal"));
+            listDiff.Add(new Button(200, 380, 140, 40, "Hard"));
+            listDiff.Add(new Button(200, 430, 140, 40, "Super hard"));
+            foreach (var b in listDiff)
+            {
+                b.Click += OnClickDiff;
+            }
+            listSize.Add(new Button(500, 230, 140, 40, "Size 700*550"));
+            listSize.Add(new Button(500, 280, 140, 40, "Size 800*600"));
+            listSize.Add(new Button(500, 330, 140, 40, "Size 1024*600"));
+            listSize.Add(new Button(500, 380, 140, 40, "Size 1280*760"));
+            listSize.Add(new Button(500, 430, 140, 40, "Size full"));
+            foreach (var b in listSize)
+            {
+                b.Click += OnClickSize;
+            }
             SettingsVisible(false);
         }
 
+        public void CloseSettings(object sender,EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (listDiff[i].color == Color.Red)
+                {
+                    difficulty = 3 + i;
+                    Game.UpdateDifficulty();
+                    break;
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                if (listSize[i].color == Color.Red)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                        {
+                            size = new Vector2i(700, 550);
+                            Game.ChangeWindowSize(700, 550, 300,50);
+                            break;
+                        }
+                        case 1:
+                        {
+                            size = new Vector2i(800, 600);
+                            Game.ChangeWindowSize(800, 600, 250,50);
+                            break;
+                        }
+                        case 2:
+                        {
+                            size = new Vector2i(1024, 600);
+                            Game.ChangeWindowSize(1024, 600,0,0);
+                            break;
+                        }
+                        case 3:
+                        {
+                            size = new Vector2i(1280, 760);
+                            Game.ChangeWindowSize(1280, 760, 0,0);
+                            break;
+                        }
+                        case 4:
+                        {
+                            size = new Vector2i(1366, 728);
+                            Game.ChangeWindowSize(1366, 728, 0,0);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            SettingsVisible(false);
+        }
+        public void OnClickDiff(object sender, EventArgs e)
+        {
+            foreach (var b in listDiff)
+            {
+                b.ChangeColor(new Color(219, 215, 210));
+            }
+            Button s = (Button)sender;
+            s.ChangeColor(Color.Red);
+        }
+        public void OnClickSize(object sender, EventArgs e)
+        {
+            foreach (var b in listSize)
+            {
+                b.ChangeColor(new Color(219, 215, 210));
+            }
+            Button s = (Button)sender;
+            s.ChangeColor(Color.Red);
+        }
         public void SettingsVisible(bool v)
         {
-            for (int i = 3; i <5; i++)
+            foreach (var b in listDiff)
             {
-                listBtn[i].visible = v;
+                b.visible = v;
             }
-        }
-        public void EasyOnClick(object sender, EventArgs args)
-        {
-            DifficultyVisible(false);
-            difficulty = 4;
-            Game.UpdateDifficulty();
-        }
-        public void NormalOnClick(object sender, EventArgs args)
-        {
-            DifficultyVisible(false);
-            difficulty = 5;
-            Game.UpdateDifficulty();
-        }
-        public void HardOnClick(object sender, EventArgs args)
-        {
-            DifficultyVisible(false);
-            difficulty = 6;
-            Game.UpdateDifficulty();
-        }
-
-        public void DifficultyVisible(bool v)
-        {
-            for (int i = 0; i < 3; i++)
+            foreach (var b in listSize)
             {
-                listBtn[i].visible = v;
-            }  
-        }
+                b.visible = v;
+            }
 
-        public void ScreenSizeVisible(bool v)
-        {
-            for (int i = 5; i < 10; i++)
-            {
-                listBtn[i].visible = v;
-            }  
+            btnClose.visible = v;
         }
-        
-        
-        public void DifficultyOnClick()
-        {
-            SettingsVisible(false);
-            DifficultyVisible(true);
-        }
-
-        public void ScreenSizeOnClick(object sender, EventArgs ev)
-        {
-            ScreenSizeVisible(true);
-            SettingsVisible(false);
-        }
-        
-        public void Size1OnClick(object sender, EventArgs ev)
-        {
-            size = new Vector2i(700, 550);
-            Game.ChangeWindowSize(700, 550, 0,0);
-            ScreenSizeVisible(false);
-        }
-        public void Size5OnClick(object sender, EventArgs ev)
-        {
-            size = new Vector2i(1280, 760);
-            Game.ChangeWindowSize(1280, 760, 0,0);
-            ScreenSizeVisible(false);
-        }
-        
-        public void Size2OnClick(object sender, EventArgs ev)
-        {
-            size = new Vector2i(800, 600);
-            Game.ChangeWindowSize(800, 600, 0,0);
-            ScreenSizeVisible(false);
-        }
-        
-        public void Size3OnClick(object sender, EventArgs ev)
-        {
-            size = new Vector2i(1024, 600);
-            Game.ChangeWindowSize(1024, 600,0,0);
-            ScreenSizeVisible(false);
-        }
-        
-        public void Size4OnClick(object sender, EventArgs ev)
-        {
-            size = new Vector2i(1366, 728);
-            Game.ChangeWindowSize(1366, 728, 0,0);
-            ScreenSizeVisible(false);
-        }
-        
         public void UpdateSettings(int l, int v, int d, int x, int y)
         {
             level = l;
@@ -158,6 +153,33 @@ namespace GameEngine
                 writer.WriteLine($"{level} {volume} {difficulty} {size.X} {size.Y}");
                 writer.Flush();
             }
+        }
+
+        public void AddToList(List<GameEntity> dobj)
+        {
+            foreach (var b in listDiff)
+            {
+                dobj.Add(b);
+            }
+            foreach (var b in listSize)
+            {
+                dobj.Add(b);
+            }
+            dobj.Add(btnClose);
+        }
+        public void SerializeObject(object obj, string filePath)
+        {
+            Type type = obj.GetType();
+            FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            List<string> lines = new List<string>();
+            foreach (FieldInfo field in fields)
+            {
+                string fieldName = field.Name;
+                object fieldValue = field.GetValue(obj);
+                lines.Add(fieldName + ":" + fieldValue);
+            }
+            File.AppendAllLines(filePath, lines);
+            
         }
     }
 }

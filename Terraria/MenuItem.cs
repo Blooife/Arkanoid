@@ -1,19 +1,13 @@
-using System.Collections.Generic;
-using GameEngine;
+
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class MenuItem: GameEntity
     {
-        private string info;
-
-        public MenuItem()
-        {
-            
-        }
+        
         
         public override void Move()
         {

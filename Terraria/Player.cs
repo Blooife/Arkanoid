@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text.Json.Serialization;
 
-namespace Arkanoid
+namespace GameEngine
 {
     public class Player
     {
@@ -35,12 +37,27 @@ namespace Arkanoid
             stat.lives = lives;
             stat.score = score;
         }
+        
+        public void SerializeObject(object obj, string filePath)
+        {
+            Type typ= obj.GetType();
+            FieldInfo[] fields = typ.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            List<string> lines = new List<string>();
+            foreach (FieldInfo field in fields)
+            {
+                string fieldName = field.Name;
+                object fieldValue = field.GetValue(obj);
+                lines.Add(fieldName + ":" + fieldValue);
+            }
+            File.AppendAllLines(filePath, lines);
+            
+        }
     }
+    
 
     public class Players
     {
         public List<Player> players = new List<Player>();
-
         public Players()
         {
             players.Add(new Player());
