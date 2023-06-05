@@ -101,6 +101,7 @@
     <Compile Include="Brick.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="CollisionEventArgs.cs" />
+    <Compile Include="Events.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameEntity.cs" />
     <Compile Include="GameField.cs" />

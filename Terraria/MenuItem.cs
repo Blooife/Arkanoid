@@ -31,13 +31,13 @@ namespace GameEngine
 
         public Menu()
         {
-            items[0].Click += Game.Continue;
-            items[1].Click += Game.NewGame;
-            items[2].Click += Game.Save;
-            items[3].Click += Game.Load;
-            items[4].Click += Game.LoadJson;
-            items[5].Click += Game.ShowSettings;
-            items[6].Click += Game.Exit; 
+            items[0].Click += (sender, args) => Game.ev.OnGameContinue();
+            items[1].Click += (sender, args) => Game.ev.OnNewGame();
+            items[2].Click += (sender, args) =>Game.Save(null,null);
+            items[3].Click += (sender, args) =>Game.Load(null,null);
+            items[4].Click += (sender, args) =>Game.LoadJson(null,null);
+            items[5].Click += (sender, args) =>Game.ShowSettings(null,null);
+            items[6].Click += (sender, args) =>Game.Exit(null,null); 
             visible = false;
             isMoving = false;
             shape = new RectangleShape(new Vector2f(400, 400));

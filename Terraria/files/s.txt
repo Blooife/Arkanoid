@@ -1,11 +1,11 @@
 radius:15
 speed:6
-direction:-7,06858366727829
+direction:-3,92699092626572
 shape:SFML.Graphics.CircleShape
-x1:381
-y1:200
-x2:401
-y2:230
+x1:535
+y1:364
+x2:565
+y2:394
 width:30
 height:30
 x:0
@@ -15,8 +15,8 @@ backgroundColor:0
 visible:True
 isMoving:True
 type:Ball
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:75
 y1:100
@@ -28,11 +28,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:75
 y1:120
@@ -47,8 +47,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:75
 y1:140
@@ -60,11 +60,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:75
 y1:160
@@ -74,13 +74,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:145
 y1:100
@@ -96,7 +96,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:145
 y1:120
@@ -111,8 +111,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:145
 y1:140
@@ -124,11 +124,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:145
 y1:160
@@ -138,13 +138,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:1
-bonus:GameEngine.Bonus
+strength:-1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:215
 y1:100
@@ -154,13 +154,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(0) G(0) B(0) A(255)
 backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:215
 y1:120
@@ -176,7 +176,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:215
 y1:140
@@ -191,8 +191,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:215
 y1:160
@@ -202,13 +202,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:285
 y1:100
@@ -223,8 +223,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:1
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:285
 y1:120
@@ -234,13 +234,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:285
 y1:140
@@ -252,11 +252,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:285
 y1:160
@@ -266,13 +266,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:355
 y1:100
@@ -288,7 +288,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:355
 y1:120
@@ -303,8 +303,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:355
 y1:140
@@ -316,11 +316,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:355
 y1:160
@@ -330,13 +330,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:425
 y1:100
@@ -352,7 +352,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:425
 y1:120
@@ -367,8 +367,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:425
 y1:140
@@ -380,11 +380,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:425
 y1:160
@@ -394,13 +394,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:495
 y1:100
@@ -416,7 +416,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:495
 y1:120
@@ -431,8 +431,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:495
 y1:140
@@ -444,11 +444,11 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:-1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:495
 y1:160
@@ -458,13 +458,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(0) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:565
 y1:100
@@ -480,7 +480,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:565
 y1:120
@@ -496,7 +496,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:565
 y1:140
@@ -511,8 +511,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:2
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:565
 y1:160
@@ -522,13 +522,13 @@ width:65
 height:20
 x:0
 y:0
-color:[Color] R(0) G(0) B(255) A(255)
+color:[Color] R(255) G(0) B(0) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
 strength:0
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:635
 y1:100
@@ -544,7 +544,7 @@ visible:False
 isMoving:False
 type:Brick
 strength:2
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:635
 y1:120
@@ -560,7 +560,7 @@ visible:True
 isMoving:False
 type:Brick
 strength:1
-bonus:GameEngine.Bonus
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:635
 y1:140
@@ -575,8 +575,8 @@ backgroundColor:0
 visible:True
 isMoving:False
 type:Brick
-strength:0
-bonus:GameEngine.Bonus
+strength:1
+bonuses:System.Collections.Generic.List`1[GameEngine.Bonus]
 shape:SFML.Graphics.RectangleShape
 x1:635
 y1:160
@@ -588,14 +588,14 @@ x:0
 y:0
 color:[Color] R(0) G(0) B(255) A(255)
 backgroundColor:0
-visible:False
+visible:True
 isMoving:False
 type:Brick
-speed:9
+speed:6
 shape:SFML.Graphics.RectangleShape
-x1:612
+x1:416
 y1:570
-x2:732
+x2:536
 y2:590
 width:120
 height:20
@@ -607,80 +607,14 @@ visible:True
 isMoving:True
 type:Platform
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPoints
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:75
-y1:601
-x2:105
-y2:626
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:75
-y1:120
-x2:95
-y2:135
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:75
-y1:545
-x2:105
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:75
-y1:545
-x2:105
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:145
+x1:95
 y1:100
-x2:165
+x2:115
 y2:115
 width:0
 height:0
@@ -692,13 +626,53 @@ visible:False
 isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:145
+x1:95
 y1:120
-x2:165
+x2:115
 y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:95
+y1:140
+x2:115
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPoints
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:95
+y1:160
+x2:115
+y2:175
 width:0
 height:0
 x:0
@@ -710,45 +684,13 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:145
-y1:551
-x2:175
-y2:576
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:145
-y1:545
-x2:175
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:215
+x1:165
 y1:100
-x2:235
+x2:185
 y2:115
 width:0
 height:0
@@ -760,12 +702,90 @@ visible:False
 isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:215
+x1:165
 y1:120
-x2:235
+x2:185
+y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:165
+y1:140
+x2:185
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:165
+y1:160
+x2:185
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:235
+y1:100
+x2:255
+y2:115
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:235
+y1:120
+x2:255
 y2:135
 width:0
 height:0
@@ -778,11 +798,13 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:215
+x1:235
 y1:140
-x2:235
+x2:255
 y2:155
 width:0
 height:0
@@ -795,63 +817,14 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:215
-y1:546
-x2:245
-y2:571
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:285
-y1:100
-x2:305
-y2:115
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:285
-y1:120
-x2:305
-y2:135
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:285
-y1:545
-x2:315
-y2:570
+x1:235
+y1:160
+x2:255
+y2:175
 width:0
 height:0
 x:0
@@ -863,28 +836,13 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:PlusPoints
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:285
-y1:601
-x2:315
-y2:626
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:355
+x1:305
 y1:100
-x2:375
+x2:325
 y2:115
 width:0
 height:0
@@ -896,12 +854,14 @@ visible:False
 isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:355
+x1:305
 y1:120
-x2:375
+x2:325
 y2:135
 width:0
 height:0
@@ -914,12 +874,356 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:355
-y1:304
-x2:385
-y2:329
+x1:305
+y1:140
+x2:325
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:305
+y1:160
+x2:325
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:375
+y1:100
+x2:395
+y2:115
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:375
+y1:120
+x2:395
+y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusLive
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:375
+y1:140
+x2:395
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:375
+y1:160
+x2:395
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:445
+y1:100
+x2:465
+y2:115
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusLive
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:445
+y1:120
+x2:465
+y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:445
+y1:140
+x2:465
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:445
+y1:160
+x2:465
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:515
+y1:100
+x2:535
+y2:115
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:515
+y1:120
+x2:535
+y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:515
+y1:140
+x2:535
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:515
+y1:160
+x2:535
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusPoints
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:585
+y1:100
+x2:605
+y2:115
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:585
+y1:120
+x2:605
+y2:135
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:585
+y1:140
+x2:605
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:585
+y1:160
+x2:605
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:MinusPlatf
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:655
+y1:165
+x2:685
+y2:190
 width:0
 height:0
 x:0
@@ -931,45 +1235,13 @@ isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
 Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:355
-y1:601
-x2:385
-y2:626
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:425
-y1:100
-x2:445
-y2:115
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:425
+x1:655
 y1:120
-x2:445
+x2:675
 y2:135
 width:0
 height:0
@@ -981,13 +1253,946 @@ visible:False
 isMoving:True
 type:Bonus
 sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+Btype:PlusPoints
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
 shape:
-x1:425
-y1:483
-x2:455
-y2:508
+x1:655
+y1:140
+x2:675
+y2:155
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
+Btype:PlusSpeedPl
+sx:0
+sy:0
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(12) OutlineThickness(0) Style(Regular)
+shape:
+x1:655
+y1:160
+x2:675
+y2:175
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:80
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:80
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:150
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:150
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:220
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:220
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:290
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:290
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:360
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:360
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:430
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:430
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:500
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:500
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:500
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:500
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:500
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:500
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:500
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:500
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:500
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:500
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:95
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:115
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:135
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:570
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:570
+y1:155
+x2:0
+y2:0
+width:0
+height:0
+x:0
+y:0
+color:[Color] R(0) G(0) B(0) A(0)
+backgroundColor:0
+visible:False
+isMoving:True
+type:Bonus
+sprite:
+Btype:Score
+sx:640
+sy:95
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
+shape:
+x1:640
+y1:160
+x2:670
+y2:185
 width:0
 height:0
 x:0
@@ -997,14 +2202,16 @@ backgroundColor:0
 visible:True
 isMoving:True
 type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPoints
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sprite:
+Btype:Score
+sx:640
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
 shape:
-x1:425
-y1:545
-x2:455
-y2:570
+x1:640
+y1:115
+x2:0
+y2:0
 width:0
 height:0
 x:0
@@ -1014,14 +2221,16 @@ backgroundColor:0
 visible:False
 isMoving:True
 type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sprite:
+Btype:Score
+sx:640
+sy:115
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
 shape:
-x1:495
-y1:100
-x2:515
-y2:115
+x1:640
+y1:115
+x2:0
+y2:0
 width:0
 height:0
 x:0
@@ -1031,14 +2240,16 @@ backgroundColor:0
 visible:False
 isMoving:True
 type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPoints
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sprite:
+Btype:Score
+sx:640
+sy:135
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
 shape:
-x1:495
-y1:120
-x2:515
-y2:135
+x1:640
+y1:135
+x2:0
+y2:0
 width:0
 height:0
 x:0
@@ -1048,14 +2259,16 @@ backgroundColor:0
 visible:False
 isMoving:True
 type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sprite:
+Btype:Score
+sx:640
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
 shape:
-x1:495
-y1:580
-x2:525
-y2:605
+x1:640
+y1:155
+x2:0
+y2:0
 width:0
 height:0
 x:0
@@ -1065,157 +2278,23 @@ backgroundColor:0
 visible:False
 isMoving:True
 type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
+sprite:
+Btype:Score
+sx:640
+sy:155
+text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(1) Font(Font) CharacterSize(30) OutlineThickness(0) Style(Regular)
 shape:
-x1:495
-y1:545
-x2:525
-y2:570
+x1:640
+y1:254
+x2:670
+y2:279
 width:0
 height:0
 x:0
 y:0
 color:[Color] R(0) G(0) B(0) A(0)
 backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:565
-y1:100
-x2:585
-y2:115
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPoints
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String(100) Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:565
-y1:120
-x2:585
-y2:135
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:565
-y1:140
-x2:585
-y2:155
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:565
-y1:545
-x2:595
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:635
-y1:545
-x2:665
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:MinusPlatf
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:635
-y1:120
-x2:655
-y2:135
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusSpeedPl
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:635
-y1:140
-x2:655
-y2:155
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
-isMoving:True
-type:Bonus
-sprite:[Sprite] Color([Color] R(255) G(255) B(255) A(255)) Texture([Texture] Size([Vector2u] X(32) Y(24)) Smooth(False) Repeated(False)) TextureRect([IntRect] Left(0) Top(0) Width(32) Height(24))
-Btype:PlusLive
-text:[Text] FillColor([Color] R(0) G(0) B(0) A(255)) OutlineColor([Color] R(0) G(0) B(0) A(255)) String() Font(Font) CharacterSize(9) OutlineThickness(0) Style(Regular)
-shape:
-x1:635
-y1:545
-x2:665
-y2:570
-width:0
-height:0
-x:0
-y:0
-color:[Color] R(0) G(0) B(0) A(0)
-backgroundColor:0
-visible:False
+visible:True
 isMoving:True
 type:Bonus
 butMenu:GameEngine.Button
@@ -1449,63 +2528,63 @@ type:
 stat:GameEngine.PlayerStatistics
 type:Player
 Ball
-381 200 401 230 0 255 255 6 -7,06858366727829
+535 364 565 394 0 255 255 6 -3,92699092626572
 Brick
-75 100 140 120 0 0 255 0
+75 100 140 120 0 0 255 1
 Brick
 75 120 140 140 255 0 0 2
 Brick
-75 140 140 160 0 0 255 0
+75 140 140 160 0 0 255 1
 Brick
-75 160 140 180 0 0 255 0
+75 160 140 180 255 0 0 2
 Brick
 145 100 210 120 0 0 255 1
 Brick
 145 120 210 140 255 0 0 2
 Brick
-145 140 210 160 0 0 255 0
+145 140 210 160 0 0 255 1
 Brick
-145 160 210 180 0 0 255 0
+145 160 210 180 255 0 0 2
 Brick
-215 100 280 120 0 0 255 1
+215 100 280 120 0 0 0 -1
 Brick
 215 120 280 140 255 0 0 2
 Brick
 215 140 280 160 0 0 255 1
 Brick
-215 160 280 180 0 0 255 0
+215 160 280 180 255 0 0 2
 Brick
 285 100 350 120 0 0 255 1
 Brick
-285 120 350 140 0 0 255 1
+285 120 350 140 255 0 0 2
 Brick
-285 140 350 160 0 0 255 0
+285 140 350 160 0 0 255 1
 Brick
-285 160 350 180 0 0 255 0
+285 160 350 180 255 0 0 2
 Brick
 355 100 420 120 0 0 255 1
 Brick
 355 120 420 140 255 0 0 2
 Brick
-355 140 420 160 0 0 255 0
+355 140 420 160 0 0 255 1
 Brick
-355 160 420 180 0 0 255 0
+355 160 420 180 255 0 0 2
 Brick
 425 100 490 120 0 0 255 1
 Brick
 425 120 490 140 255 0 0 2
 Brick
-425 140 490 160 0 0 255 0
+425 140 490 160 0 0 255 1
 Brick
-425 160 490 180 0 0 255 0
+425 160 490 180 255 0 0 2
 Brick
 495 100 560 120 0 0 255 1
 Brick
 495 120 560 140 255 0 0 2
 Brick
-495 140 560 160 0 0 255 0
+495 140 560 160 0 0 255 1
 Brick
-495 160 560 180 0 0 255 0
+495 160 560 180 0 0 0 -1
 Brick
 565 100 630 120 0 0 255 1
 Brick
@@ -1513,7 +2592,7 @@ Brick
 Brick
 565 140 630 160 0 0 255 1
 Brick
-565 160 630 180 0 0 255 0
+565 160 630 180 255 0 0 2
 Brick
 635 100 700 120 0 0 255 0
 Brick
@@ -1521,6 +2600,6 @@ Brick
 Brick
 635 140 700 160 0 0 255 1
 Brick
-635 160 700 180 0 0 255 0
+635 160 700 180 0 0 255 1
 Platform
-612 570 732 590 0 255 0 9
+416 570 536 590 0 255 0 6

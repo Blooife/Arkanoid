@@ -17,6 +17,7 @@ namespace GameEngine
 
         public GameField()
         {
+            Game.ev.OnCollision += CollisionEvent;
             OnCollision += CollisionEvent;
         }
         public void NewGame()
@@ -37,11 +38,12 @@ namespace GameEngine
             {
                 displayObjects.Add(b);
             }
+            bonuses.SetBrick(bricks);
             foreach (var b in bonuses.bonuses)
             {
                 displayObjects.Add(b);
             }
-            bonuses.SetBrick(bricks);
+            
             displayObjects.Add(statusBar);
             displayObjects.Add(Messages.mLostGame);
             displayObjects.Add(Messages.mWinGame);
@@ -70,6 +72,13 @@ namespace GameEngine
                 }
             }
             bonuses.SetBrick(bricks);
+            foreach (var b in bonuses.bonuses)
+            {
+                if (b.Btype == BonusType.Score)
+                {
+                    displayObjects.Add(b);
+                }
+            }
             displayObjects.Add(statusBar);
             displayObjects.Add(Messages.mLostGame); 
             displayObjects.Add(Messages.mWinGame);

@@ -37,6 +37,8 @@ namespace GameEngine
             height = y2 - y1;
             UpdateSize();
         }
+        
+        
 
         public override void UpdateSize()
         {
@@ -119,7 +121,7 @@ namespace GameEngine
                         if (Game.player.stat.lives <= 1)
                         {
                             Game.player.stat.lives--;
-                            GameField.Messages.mLostGame.ShowMessage();
+                            Game.ev.OnGameOver();
                             this.visible = false;
                             return;
                         }
@@ -145,6 +147,27 @@ namespace GameEngine
             y2 = (int)(y2 + dy);
             shape.Position = new Vector2f(x1, y1);
         }
+        
+        public void BallHandlerCollisions(GameEntity obj)
+        {
+            if (!(obj is Bonus))
+            {
+                if (y1 >= obj.y2 || y2 <= obj.y1)
+                {
+                    direction = -direction;
+                }
+                else
+                {
+                    direction = (float)(Math.PI) - direction;
+                }
+
+                if (obj is Brick brick)
+                {
+                    Game.player.stat.score++;
+                    brick.DecreaseStrength();
+                }
+            }
+        }
 
         public override void OnCollision(GameEntity obj)
         {
@@ -162,7 +185,7 @@ namespace GameEngine
                 if (obj is Brick brick)
                 {
                     Game.player.stat.score++;
-                    brick.decreaseStrength();
+                    brick.DecreaseStrength();
                 }
             }
         }

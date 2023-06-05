@@ -105,12 +105,12 @@ namespace GameEngine
                     }
                     case "Bonus":
                     {
+                        if((BonusType)obj.Btype != BonusType.Score)
                         objs.Add(new Bonus("", (BonusType)obj.Btype, (bool)obj.visible,  (int)obj.x1, (int)obj.y1));
                         break;
                     }
                 }
             }
-            
             string jsonPl =
                 File.ReadAllText(path+"player.json");
             Player pl = JsonConvert.DeserializeObject<Player>(jsonPl);

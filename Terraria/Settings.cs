@@ -58,7 +58,7 @@ namespace GameEngine
             {
                 if (listDiff[i].color == Color.Red)
                 {
-                    difficulty = 3 + i;
+                    difficulty = 4 + i;
                     Game.UpdateDifficulty();
                     break;
                 }
@@ -72,7 +72,8 @@ namespace GameEngine
                         case 0:
                         {
                             size = new Vector2i(700, 550);
-                            Game.ChangeWindowSize(700, 550, 300,50);
+                            Game.ev.OnChangeSize(700,550,300,50);
+                            //Game.ChangeWindowSize(700, 550, 300,50);
                             break;
                         }
                         case 1:

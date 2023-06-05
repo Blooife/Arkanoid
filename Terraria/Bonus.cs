@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Security.Cryptography;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.System;
+using SFML.Window;
 
 namespace GameEngine
 {
@@ -12,20 +15,35 @@ namespace GameEngine
         private Texture texture;
         public Sprite sprite;
         [JsonProperty]public BonusType Btype;
+        public float sx, sy;
         public Bonus(string str):base(str)
         {
             type = "Bonus";
-            text.CharacterSize = 9;
-            visible = false; //////////////
+            text.CharacterSize = 12;
+            visible = false; 
             isMoving = true;
             RandBonus();
+        }
+
+        public Bonus(float x, float y, string str):base(str)
+        {
+            type = "Bonus";
+            sx = x;
+            sy = y;
+            x1 = x;
+            y1 = y;
+            Btype = BonusType.Score;
+            text.DisplayedString = str;
+            text.Position = new Vector2f(x1, y1);
+            visible = false;
+            isMoving = true;
         }
         
         public Bonus(string str, BonusType t, bool v, int x, int y):base(str)
         {
             type = "Bonus";
             Btype = t;
-            text.CharacterSize = 9;
+            text.CharacterSize = 12;
             visible = v; 
             isMoving = true;
             SetBonus();
@@ -66,8 +84,8 @@ namespace GameEngine
                     break;
                 }
             }
-
-            sprite = new Sprite(texture);
+            if(texture != null)
+                sprite = new Sprite(texture);
         }
 
         public void RandBonus()
@@ -107,12 +125,16 @@ namespace GameEngine
                     break;
                 }
             }
-            sprite = new Sprite(texture);
+            if(texture != null)
+             sprite = new Sprite(texture);
         }
 
         public override void draw(RenderWindow window)
         {
-            window.Draw(sprite);
+            if (sprite != null)
+            {
+                window.Draw(sprite);
+            }
             window.Draw(text);
         }
 
@@ -120,7 +142,8 @@ namespace GameEngine
         {
             x2 = x1 + 30;
             y2 = y1 + 25;
-            sprite.Position = new Vector2f(x1, y1);
+            if(sprite != null)
+                sprite.Position = new Vector2f(x1, y1);
             text.Position = new Vector2f(x1, y1);
         }
 
@@ -137,8 +160,14 @@ namespace GameEngine
                 else
                 {
                     visible = false;
+                    if (this.Btype == BonusType.Score)
+                    {
+                        x1 = sx;
+                        y1 = sy;
+                    }
                 }
-                sprite.Position = new Vector2f(x1, y1);
+                if(sprite!=null)
+                    sprite.Position = new Vector2f(x1, y1);
                 text.Position = new Vector2f(x1, y1);
             }
         }
@@ -176,6 +205,12 @@ namespace GameEngine
                             platform.speed += 1;
                         break;
                     }
+                    case BonusType.Score:
+                    {
+                        x1 = sx;
+                        y1 = sy;
+                        break;
+                    }
                 }
             }
         }
@@ -202,6 +237,7 @@ namespace GameEngine
         MinusPlatf,
         PlusLive,
         PlusSpeedPl,
+        Score,
     }
 
     public class Bonuses
@@ -212,7 +248,7 @@ namespace GameEngine
         {
             for (int i = 0; i < 36; i++)
             {
-                bonuses.Add(new Bonus("")); 
+                bonuses.Add(new Bonus(""));
             }
         }
         
@@ -220,25 +256,37 @@ namespace GameEngine
         {
             
         }
-        
-       
-
 
         public void SetBrick(Bricks br)
         {
             int i = 0;
+            var bns = new List<Bonus>();
             foreach (var bonus in bonuses)
             {
                 Brick brick = br.bricks[i];
                 if (brick.visible && !bonus.visible)
                 {
-                    br.bricks[i].bonus = bonus;
-                    bonus.x1 = brick.x1;
+                    bonus.x1 = brick.x1+20;
                     bonus.y1 = brick.y1;
                     bonus.x2 = bonus.x1 + 20;
                     bonus.y2 = bonus.y1 + 15;
+                    br.bricks[i].bonuses.Add(bonus);
+                    var b = new Bonus(brick.x1+5, brick.y1-5, "100");
+                    br.bricks[i].bonuses.Add(b);
+                    bns.Add(b);
+                    if (br.bricks[i].strength == 2)
+                    {
+                        var e = new Bonus(brick.x1+5, brick.y1-5, "100");
+                        br.bricks[i].bonuses.Add(e);
+                        bns.Add(e);
+                    }
                 }
                 i++;
+            }
+
+            foreach (var b in bns)
+            {
+                bonuses.Add(b);
             }
         }
         

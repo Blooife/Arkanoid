@@ -13,7 +13,7 @@ namespace GameEngine
     public class Brick: GameEntity
     {
         [JsonProperty]public int strength;
-        public Bonus bonus;
+        public List<Bonus>  bonuses = new List<Bonus>();
 
         public Brick(int x1, int y1,  int x2, int y2, int str, Color col, bool v)
         {
@@ -33,7 +33,7 @@ namespace GameEngine
             strength = str;
             isMoving = false;
             visible = v;
-            //bonus = new Bonus(x1,y1,"1");
+            //bonuses.Add(new Bonus(x1, y1-5,"1"));
         }
         public override void SerializeToText(string filename)
         {
@@ -62,7 +62,7 @@ namespace GameEngine
             type = "Brick";
             width = x2 - x1;
             height = y2 - y1;
-            //bonus = new Bonus(x1,y1, "1");
+           // bonuses.Add(new Bonus(x1, y1-5,"1"));
         }
         public override void Move()
         {
@@ -74,20 +74,24 @@ namespace GameEngine
         }
         
 
-        public void decreaseStrength()
+        public void DecreaseStrength()
         {
-            if (strength != 15)
+            if (strength != -1)
             {
                 strength -= 1;
                 if (strength == 1)
                 {
                     color = Color.Blue;
                     shape.FillColor = color;
+                    if(bonuses.Count >=2 )
+                        bonuses[2].visible = true;
                 }
                 else if(strength == 0)
                 {
                     visible = false;
-                    bonus.visible = true;
+                    bonuses[0].visible = true;
+                    if(bonuses.Count >=1 )
+                        bonuses[1].visible = true;
                     Game.gameField.CheckGameState();
                 }
             }
@@ -109,6 +113,13 @@ namespace GameEngine
                 bricks.Add(new Brick(i*70+5, 140,i*70+70, 160, 1, Color.Blue, true));
                 bricks.Add(new Brick(i*70+5, 160,i*70+70, 180, 2, Color.Red, true));
             }
+
+            bricks[8].strength = -1;
+            bricks[8].color = Color.Black;
+            bricks[8].shape.FillColor = bricks[8].color;
+            bricks[27].strength = -1;
+            bricks[27].color = Color.Black;
+            bricks[27].shape.FillColor = bricks[8].color;
         }
         
         public Bricks(int n)

@@ -1,4 +1,5 @@
 using System;
+using System.Timers;
 using SFML.Graphics;
 using SFML.Window;
 using SFML.System;
@@ -15,74 +16,100 @@ namespace GameEngine
         public static RenderWindow window;
         public static bool pause;
         public static Random rndm = new Random();
-        
-        
-        public static event EventHandler<EventArgs> GamePause;
-        public static event EventHandler<EventArgs> GameContinue;
-       // public event EventHandler<EventArgs> GameSave;
-        public static event EventHandler<EventArgs> GameNew;
-        /*public event EventHandler<EventArgs> GameLoad;
-        public event EventHandler<EventArgs> GameSettings;
-        public event EventHandler<EventArgs> GameExit;*/
-        
-        
+        public static Timer tmr = new Timer();
+
+        public static Events ev = new Events();
 
         public Game()
         {
             gameField = new GameField();
-            GameContinue += Continue;
-            GameNew += NewGame;
-            /*GameSave += Save;
-            GameLoad += Load;
-            GameSettings += ShowSettings;
-            GameExit += Exit;*/
-            GamePause += Pause;
+            ev.StartHandler += (Start);
+            ev.PauseHandler += (Pause);
+            ev.ContinueHandler += (Continue);
+            ev.NewGameHandler += (NewGame);
+            ev.ChangeSizeHandler += (ChangeWindowSize);
+            ev.GameOverHandler += (GameOver);
+            ev.TimerHandler += (GameEvent);
             gameField.displayObjects.Add(menu);
             settings.AddToList(gameField.displayObjects);
             menu.ShowMenu();
+            tmr.Interval = 10;
+            tmr.Elapsed += OnTimerEvent;
+            tmr.AutoReset = true;
         }
-
+        
         public void Start()
         {
             window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
             window.Position = new Vector2i(0, 0);
             settings.size = new Vector2i(1366, 728);
             ChangeWindowSize(1366,728,0,0);
-            window.SetFramerateLimit(60);                                                                         GameNew?.Invoke(null,null);   GamePause?.Invoke(null,null);
-            Clock clock = new Clock();
-            Time timeSinceLastUpdate = Time.Zero;
-            Time timePerFrame = Time.FromSeconds(1 / 144f);
+            window.SetFramerateLimit(60);                                                                         NewGame();   Pause();
             window.SetKeyRepeatEnabled(false);
             window.Clear(Color.White);
             window.Closed += (sender, args) => window.Close();
-            while (window.IsOpen)
-            {
-                Time dt = clock.Restart();
-                timeSinceLastUpdate += dt;
-                while (timeSinceLastUpdate >= timePerFrame)
-                {
-                    timeSinceLastUpdate -= timePerFrame;
-                    window.DispatchEvents();
-                    window.Clear(Color.White);
-                    if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
-                    {
-                        GamePause?.Invoke(null,null);
-                    }
-                    if (!pause)
-                    {
-                        gameField.MoveObjects();
-                        gameField.CheckCollisions();
-                    }
-                    gameField.DrawObjects(window);
-                    window.Display();
-                }
-            }
+            tmr.Start();
         }
 
-        public static void NewGame(object sender, EventArgs e)
+        /*public void Start()
+        {
+            window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
+            window.Position = new Vector2i(0, 0);
+            settings.size = new Vector2i(1366, 728);
+            ChangeWindowSize(1366, 728, 0, 0);
+            window.SetFramerateLimit(60);
+            NewGame();
+            Pause();
+            window.SetKeyRepeatEnabled(false);
+            window.Clear(Color.White);
+            window.Closed += (sender, args) => window.Close();
+            tmr.Start();
+            /*Clock cl = new Clock();
+            Time elapsed;
+            while (window.IsOpen)
+            {
+                window.DispatchEvents();
+                elapsed = cl.Restart();
+                if (elapsed >= Time.FromMilliseconds(16))
+                {
+                    ev.OnTimer();
+                }
+            }#1#
+        }*/
+        
+        /*static void Sleep(int milliseconds)
+        {
+            Clock sleepClock = new Clock();
+            while (sleepClock.ElapsedTime.AsMilliseconds() < milliseconds);
+        }*/
+        
+        public static void OnTimerEvent(object sender, ElapsedEventArgs e)
+        {
+            ev.OnTimer();
+        }
+
+
+        public void GameEvent()
+        {
+            window.DispatchEvents();
+            window.Clear(Color.White);
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
+            {
+                    ev.OnGamePause();
+            }
+            if (!pause)
+            {
+                    gameField.MoveObjects();
+                    gameField.CheckCollisions();
+            }
+            gameField.DrawObjects(window);
+            window.Display();
+            
+        }
+        public static void NewGame()
         {
             gameField.displayObjects.Clear();
-            GameContinue?.Invoke(null,null);
+            Continue();
             gameField.NewGame();
             player.stat.lives = 3;
             player.stat.score = 0;
@@ -90,7 +117,7 @@ namespace GameEngine
             settings.AddToList(gameField.displayObjects);
         }
 
-        public static void Pause(object sender, EventArgs e)
+        public static void Pause()
         {
             pause = true;
             menu.ShowMenu();
@@ -102,7 +129,7 @@ namespace GameEngine
             serialize.SerializeJson(gameField.displayObjects, player, settings);
         }
 
-        public static void Continue(object sender, EventArgs e)
+        public static void Continue()
         {
             pause = false;
             menu.HideMenu();
@@ -112,15 +139,14 @@ namespace GameEngine
             gameField.displayObjects.Clear(); 
             serialize.DeserializeJsonFile(gameField.displayObjects, player, settings);      
             gameField.Update();
-            GameContinue?.Invoke(null,null);
+            Continue();
         }
         public static void Load(object sender, EventArgs e)
         {
             gameField.displayObjects.Clear(); 
             serialize.DeserializeJsonFile(gameField.displayObjects, player, settings);
-            //serialize.DeserializeText(gameField.displayObjects, player, settings);
             gameField.Update();
-            GameContinue?.Invoke(null,null);
+            Continue();
         }
 
         public static void ShowSettings(object sender, EventArgs e)
@@ -132,7 +158,7 @@ namespace GameEngine
         public static void UpdateDifficulty()
         {
             gameField.displayObjects.Clear();
-            GameContinue?.Invoke(null,null);
+            Continue();
             gameField.NewGame();
             player.stat.lives = 3;
             player.stat.score = 0;
@@ -144,6 +170,7 @@ namespace GameEngine
 
         public static void ChangeWindowSize(uint x, uint y, int px, int py)
         {
+            
             window.Size = new Vector2u(x, y);
             pause = false;
             window.Position = new Vector2i(px,py);
@@ -153,9 +180,60 @@ namespace GameEngine
             }
         }
 
+        public bool GameOver()
+        {
+            GameField.Messages.mLostGame.ShowMessage();
+            return true;
+        }
+
         public static void Exit(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        public void StartGame()
+        {
+            window = new RenderWindow(new VideoMode(800, 600), "Arkanoid", Styles.None);
+            window.Position = new Vector2i(0, 0);
+            settings.size = new Vector2i(1366, 728);
+            ChangeWindowSize(1366,728,0,0);
+            window.SetFramerateLimit(60);        
+            window.SetKeyRepeatEnabled(false);
+            window.Clear(Color.White);
+            NewGame();
+            Pause();
+            window.Closed += (sender, args) => window.Close();
+            while (window.IsOpen)
+            {
+                window.DispatchEvents();
+                window.Clear(Color.White);
+                if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
+                {
+                    ev.OnGamePause();
+                }
+                if (!pause)
+                {
+                    gameField.MoveObjects();
+                    gameField.CheckCollisions();
+                }
+                gameField.DrawObjects(window);
+                window.Display();
+            }
         }
     }
 }

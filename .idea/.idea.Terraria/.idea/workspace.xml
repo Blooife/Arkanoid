@@ -4,19 +4,17 @@
     <projectFile>Terraria/Terraria.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e567c3aa-f8f3-4355-9492-6ffbd47f48f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Terraria/CollisionEventArgs.cs" afterDir="false" />
+    <list default="true" id="e567c3aa-f8f3-4355-9492-6ffbd47f48f8" name="Changes" comment="U">
+      <change afterPath="$PROJECT_DIR$/Terraria/Events.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Terraria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Terraria/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Ball.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Bonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Bonus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Brick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Brick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraria/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Button.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraria/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/GameEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/GameField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/GameField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/GameMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/GameMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/MenuItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/MenuItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraria/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraria/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Proxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Proxy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/Settings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terraria/StatusBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Terraria/StatusBar.cs" afterDir="false" />
@@ -58,7 +56,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9da0f7899ec084b07a873d76ef6b94ebf75f6ce66b5ebcbd294ef46630d58c/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74bfa604fb3c83b66e57dd3967b7b2f6ecce139469edae967eff3768a61a2/JsonConverterOfT.ReadCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Terraria/Ball.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Asus/Desktop/TerraEngine-master/TerraEngine-master/Terraria/Ball.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Terraria/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Terraria/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Terraria/packages.config" root0="FORCE_HIGHLIGHTING" />
@@ -68,7 +65,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2N1OzWM9ML2WDi9MAKgoIEqQXkc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -145,7 +142,10 @@
       <workItem from="1684908400173" duration="9584000" />
       <workItem from="1685397641560" duration="5134000" />
       <workItem from="1685439126714" duration="4358000" />
-      <workItem from="1685463990459" duration="13595000" />
+      <workItem from="1685463990459" duration="14281000" />
+      <workItem from="1685513573301" duration="4676000" />
+      <workItem from="1685914626725" duration="8512000" />
+      <workItem from="1685945503017" duration="6270000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1682490658354</created>
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685465724344</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="U">
+      <created>1685488137085</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685488137085</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,9 +206,27 @@
     <MESSAGE value="change" />
     <MESSAGE value="update" />
     <MESSAGE value="upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd" />
+    <MESSAGE value="U" />
+    <option name="LAST_COMMIT_MESSAGE" value="U" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Terraria/Proxy.cs</url>
+          <line>76</line>
+          <properties documentPath="C:\Users\Asus\Desktop\TerraEngine-master\TerraEngine-master\Terraria\Proxy.cs" initialLine="76" containingFunctionPresentation="method 'DeserializeJsonFile'">
+            <startOffsets>
+              <option value="2865" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2942" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Arkanoid.GameField" memberName="allObjects" />

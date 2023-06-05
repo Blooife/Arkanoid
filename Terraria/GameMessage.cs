@@ -28,7 +28,7 @@ namespace GameEngine
         public void OnBOKClick(object sender, EventArgs e)
         {
             HideMessage();
-            Game.Pause(null,null);
+            Game.Pause();
         }
         public void ShowMessage()
         {
